@@ -1,23 +1,21 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { BookOpen, HelpCircle, FileText, Newspaper, Lightbulb } from "lucide-react";
+import { HelpCircle, FileText, Lightbulb } from "lucide-react";
 import { PageHero } from "@/components/site/PageHero";
 
 export const Route = createFileRoute("/resources")({
   head: () => ({
     meta: [
       { title: "Resources — Adept Consultants" },
-      { name: "description", content: "Insights, guides, FAQs, and updates from our cross-border legal practice." },
+      { name: "description", content: "Plain-English legal guides, FAQs, and case insights from our cross-border practice." },
       { property: "og:url", content: "/resources" },
     ],
     links: [{ rel: "canonical", href: "/resources" }],
   }),
   component: () => {
     const items = [
-      { icon: BookOpen, title: "Blog", desc: "Practical insights on cross-border legal matters.", to: "/resources/blog" },
-      { icon: HelpCircle, title: "FAQs", desc: "Answers to common questions about our services.", to: "/resources/faq" },
-      { icon: FileText, title: "Legal Guides", desc: "Plain-English guides on key legal topics.", to: "/resources/legal-guides" },
-      { icon: Lightbulb, title: "Case Insights", desc: "Lessons from representative matters.", to: "/resources/case-insights" },
-      { icon: Newspaper, title: "News & Updates", desc: "Firm announcements and regulatory developments.", to: "/resources/news" },
+      { icon: HelpCircle, title: "FAQs", desc: "Clear answers to the questions clients ask most about our cross-border services, fees, and engagement process.", to: "/resources/faq" },
+      { icon: FileText, title: "Legal Guides", desc: "Plain-English guides on company formation, property acquisition, immigration, and dispute resolution across Texas and Nigeria.", to: "/resources/legal-guides" },
+      { icon: Lightbulb, title: "Case Insights", desc: "Lessons drawn from representative cross-border matters — what worked, what we learned, and how to avoid common pitfalls.", to: "/resources/case-insights" },
     ];
     return (
       <>
