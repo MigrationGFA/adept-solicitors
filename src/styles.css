@@ -5,7 +5,9 @@
 @custom-variant dark (&:is(.dark *));
 
 /* ADEPT CONSULTANTS — Premium law firm design system
- * Palette: deep navy, warm gold, bone white, soft graphite.
+ * Palette inspired by the Adept Solicitors mark:
+ *   deep oxblood/burgundy "navy" slot, warm coral-red accent, buttery gold,
+ *   ivory/bone backgrounds.
  * Typography: Playfair Display (display), Inter (body).
  */
 
@@ -51,53 +53,55 @@
     0 8px 24px -12px color-mix(in oklab, var(--navy) 18%, transparent);
   --shadow-gold: 0 8px 30px -10px color-mix(in oklab, var(--gold) 45%, transparent);
 
-  --gradient-navy: linear-gradient(135deg, oklch(0.18 0.04 260) 0%, oklch(0.24 0.06 265) 100%);
-  --gradient-hero: linear-gradient(180deg, oklch(0.12 0.03 260 / 0.55) 0%, oklch(0.12 0.03 260 / 0.85) 100%);
-  --gradient-gold: linear-gradient(135deg, oklch(0.78 0.12 80) 0%, oklch(0.68 0.14 70) 100%);
-  --gradient-bone: linear-gradient(180deg, oklch(0.985 0.005 80) 0%, oklch(0.96 0.01 80) 100%);
+  --gradient-navy: linear-gradient(135deg, oklch(0.30 0.12 25) 0%, oklch(0.40 0.16 28) 100%);
+  --gradient-hero: linear-gradient(180deg, oklch(0.22 0.10 25 / 0.55) 0%, oklch(0.20 0.10 25 / 0.88) 100%);
+  --gradient-gold: linear-gradient(135deg, oklch(0.90 0.13 92) 0%, oklch(0.80 0.15 82) 100%);
+  --gradient-bone: linear-gradient(180deg, oklch(0.985 0.008 80) 0%, oklch(0.96 0.015 75) 100%);
 }
 
 :root {
   --radius: 0.5rem;
 
-  --background: oklch(0.99 0.005 80);
-  --foreground: oklch(0.18 0.03 260);
+  --background: oklch(0.985 0.008 80);
+  --foreground: oklch(0.22 0.07 25);
 
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.18 0.03 260);
+  --card-foreground: oklch(0.22 0.07 25);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.18 0.03 260);
+  --popover-foreground: oklch(0.22 0.07 25);
 
-  --primary: oklch(0.2 0.04 262);
-  --primary-foreground: oklch(0.985 0.005 80);
+  --primary: oklch(0.32 0.12 25);
+  --primary-foreground: oklch(0.985 0.008 80);
 
-  --secondary: oklch(0.96 0.008 80);
-  --secondary-foreground: oklch(0.2 0.04 262);
+  --secondary: oklch(0.96 0.015 75);
+  --secondary-foreground: oklch(0.32 0.12 25);
 
-  --muted: oklch(0.955 0.008 80);
-  --muted-foreground: oklch(0.45 0.02 260);
+  --muted: oklch(0.955 0.012 75);
+  --muted-foreground: oklch(0.48 0.04 30);
 
-  --accent: oklch(0.95 0.02 80);
-  --accent-foreground: oklch(0.2 0.04 262);
+  --accent: oklch(0.94 0.04 70);
+  --accent-foreground: oklch(0.32 0.12 25);
 
-  --navy: oklch(0.2 0.04 262);
-  --navy-foreground: oklch(0.985 0.005 80);
-  --gold: oklch(0.74 0.12 78);
-  --gold-foreground: oklch(0.18 0.03 260);
-  --bone: oklch(0.985 0.005 80);
+  /* Brand: "navy" slot is reused as the primary deep-burgundy brand color
+     so existing components (bg-navy / text-navy) automatically restyle. */
+  --navy: oklch(0.32 0.12 25);
+  --navy-foreground: oklch(0.96 0.06 90);
+  --gold: oklch(0.84 0.14 88);
+  --gold-foreground: oklch(0.25 0.10 25);
+  --bone: oklch(0.985 0.008 80);
 
   --destructive: oklch(0.55 0.22 27);
-  --destructive-foreground: oklch(0.985 0.005 80);
+  --destructive-foreground: oklch(0.985 0.008 80);
 
-  --border: oklch(0.9 0.01 260);
-  --input: oklch(0.9 0.01 260);
-  --ring: oklch(0.74 0.12 78);
+  --border: oklch(0.9 0.02 60);
+  --input: oklch(0.9 0.02 60);
+  --ring: oklch(0.84 0.14 88);
 
-  --chart-1: oklch(0.2 0.04 262);
-  --chart-2: oklch(0.74 0.12 78);
-  --chart-3: oklch(0.5 0.05 260);
-  --chart-4: oklch(0.7 0.04 80);
-  --chart-5: oklch(0.35 0.04 260);
+  --chart-1: oklch(0.32 0.12 25);
+  --chart-2: oklch(0.84 0.14 88);
+  --chart-3: oklch(0.55 0.17 28);
+  --chart-4: oklch(0.72 0.10 70);
+  --chart-5: oklch(0.40 0.10 25);
 
   --sidebar: var(--bone);
   --sidebar-foreground: var(--foreground);

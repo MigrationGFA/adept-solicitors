@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook } from "lucide-react";
 import { site } from "@/lib/site";
 import { usaServices, nigeriaServices, internationalServices } from "@/lib/services";
+import logo from "@/assets/adept-logo.png";
 
 export function Footer() {
   return (
@@ -9,7 +10,7 @@ export function Footer() {
       <div className="container-prose py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
         <div className="lg:col-span-2">
           <div className="flex items-center gap-3 mb-5">
-            <div className="size-10 rounded-sm bg-bone text-navy flex items-center justify-center font-display text-xl">A</div>
+            <img src={logo} alt="Adept Consultants" className="h-11 w-auto rounded-sm" />
             <div>
               <div className="font-display text-lg font-semibold">Adept Consultants</div>
               <div className="text-[10px] uppercase tracking-[0.18em] text-bone/60">Legal Practitioners & Consultants</div>
