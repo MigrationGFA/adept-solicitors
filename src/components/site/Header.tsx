@@ -185,7 +185,7 @@ function MegaColumn({ title, to, items }: { title: string; to: string; items: { 
       <ul className="space-y-1.5">
         {items.map((it) => (
           <li key={it.to}>
-            <Link to={it.to} className="text-sm text-foreground/80 hover:text-navy transition">
+            <a href={it.to} className="text-sm text-foreground/80 hover:text-navy transition">
               {it.label}
             </Link>
           </li>
@@ -222,7 +222,7 @@ function MobileGroup({
       {open && (
         <div className="pb-2 pl-3 flex flex-col">
           {items.map((it) => (
-            <Link key={it.to} to={it.to} onClick={onClick} className="py-2 text-sm text-foreground/80">
+            <a key={it.to} href={it.to} onClick={onClick} className="py-2 text-sm text-foreground/80">
               {it.label}
             </Link>
           ))}
