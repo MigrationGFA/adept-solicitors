@@ -33,7 +33,6 @@ function HubPage() {
             <a key={s.slug} href={`/usa/${s.slug}`} className="group p-7 rounded-md border border-border bg-card hover:border-gold hover:shadow-card-soft transition">
               <div className="font-display text-xl font-semibold text-navy mb-2 group-hover:text-gold transition">{s.title}</div>
               <p className="text-sm text-muted-foreground leading-relaxed">{s.blurb}</p>
-              </div>
             </a>
           ))}
         </div>
