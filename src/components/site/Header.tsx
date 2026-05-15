@@ -16,11 +16,9 @@ const aboutLinks: NavItem[] = [
 ];
 
 const resourceLinks: NavItem[] = [
-  { to: "/resources/blog", label: "Blog" },
   { to: "/resources/faq", label: "FAQs" },
   { to: "/resources/legal-guides", label: "Legal Guides" },
   { to: "/resources/case-insights", label: "Case Insights" },
-  { to: "/resources/news", label: "News & Updates" },
 ];
 
 export function Header() {
