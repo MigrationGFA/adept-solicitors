@@ -74,7 +74,7 @@ export function Header() {
               ]}
             />
             <a href="/international" className="px-3 py-2 text-foreground/80 hover:text-navy transition">International</a>
-            <Dropdown label="Resources" items={resourceLinks} />
+            
             <a href="/contact" className="px-3 py-2 text-foreground/80 hover:text-navy transition">Contact</a>
           </nav>
 
