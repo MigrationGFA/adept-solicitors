@@ -4,6 +4,7 @@ import { Menu, X, ChevronDown, Phone } from "lucide-react";
 import { site } from "@/lib/site";
 import { usaServices, nigeriaServices, internationalServices } from "@/lib/services";
 import { industries } from "@/lib/industries";
+import logo from "@/assets/adept-logo.png";
 
 type NavItem = { to: string; label: string };
 
@@ -54,14 +55,16 @@ export function Header() {
       >
         <div className="container-prose flex items-center justify-between h-16 md:h-20">
           <Link to="/" className="flex items-center gap-3">
-            <div className="size-9 rounded-sm bg-navy flex items-center justify-center text-bone font-display text-lg shadow-card-soft">
-              A
-            </div>
-            <div className="leading-tight">
+            <img
+              src={logo}
+              alt="Adept Consultants"
+              className="h-10 md:h-12 w-auto rounded-sm shadow-card-soft"
+            />
+            <div className="leading-tight hidden sm:block">
               <div className="font-display text-base md:text-lg font-semibold tracking-tight text-navy">
                 Adept Consultants
               </div>
-              <div className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground hidden sm:block">
+              <div className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
                 Legal Practitioners & Consultants
               </div>
             </div>
