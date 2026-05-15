@@ -33,9 +33,6 @@ function HubPage() {
             <a key={s.slug} href={`/nigeria/${s.slug}`} className="group p-7 rounded-md border border-border bg-card hover:border-gold hover:shadow-card-soft transition">
               <div className="font-display text-xl font-semibold text-navy mb-2 group-hover:text-gold transition">{s.title}</div>
               <p className="text-sm text-muted-foreground leading-relaxed">{s.blurb}</p>
-              <div className="mt-5 inline-flex items-center gap-1.5 text-sm text-navy group-hover:text-gold transition font-medium">
-                Learn more <ArrowRight className="size-3.5" />
-              </div>
             </a>
           ))}
         </div>
