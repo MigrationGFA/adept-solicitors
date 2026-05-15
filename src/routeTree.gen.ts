@@ -9,38 +9,822 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as WhyChooseUsRouteImport } from './routes/why-choose-us'
+import { Route as UsaRouteImport } from './routes/usa'
+import { Route as TeamRouteImport } from './routes/team'
+import { Route as ResourcesRouteImport } from './routes/resources'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
+import { Route as OurApproachRouteImport } from './routes/our-approach'
+import { Route as NigeriaRouteImport } from './routes/nigeria'
+import { Route as InternationalRouteImport } from './routes/international'
+import { Route as IndustriesRouteImport } from './routes/industries'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as BookConsultationRouteImport } from './routes/book-consultation'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as UsaTransactionsNegotiationsRouteImport } from './routes/usa.transactions-negotiations'
+import { Route as UsaNigerianOwnedLawFirmTexasRouteImport } from './routes/usa.nigerian-owned-law-firm-texas'
+import { Route as UsaNigerianLawyersInTexasRouteImport } from './routes/usa.nigerian-lawyers-in-texas'
+import { Route as UsaLegalAdvisoryRouteImport } from './routes/usa.legal-advisory'
+import { Route as UsaLawyersInMelissaTexasRouteImport } from './routes/usa.lawyers-in-melissa-texas'
+import { Route as UsaInternationalBusinessLawRouteImport } from './routes/usa.international-business-law'
+import { Route as UsaDisputeResolutionRouteImport } from './routes/usa.dispute-resolution'
+import { Route as UsaCrossBorderRepresentationRouteImport } from './routes/usa.cross-border-representation'
+import { Route as UsaComplianceSupportRouteImport } from './routes/usa.compliance-support'
+import { Route as UsaCompanySecretarialServicesRouteImport } from './routes/usa.company-secretarial-services'
+import { Route as UsaCompanyFormationRouteImport } from './routes/usa.company-formation'
+import { Route as ResourcesNewsRouteImport } from './routes/resources.news'
+import { Route as ResourcesLegalGuidesRouteImport } from './routes/resources.legal-guides'
+import { Route as ResourcesFaqRouteImport } from './routes/resources.faq'
+import { Route as ResourcesCaseInsightsRouteImport } from './routes/resources.case-insights'
+import { Route as ResourcesBlogRouteImport } from './routes/resources.blog'
+import { Route as NigeriaWillsEstatesRouteImport } from './routes/nigeria.wills-estates'
+import { Route as NigeriaRealEstatePropertyLawRouteImport } from './routes/nigeria.real-estate-property-law'
+import { Route as NigeriaOilGasLawRouteImport } from './routes/nigeria.oil-gas-law'
+import { Route as NigeriaNegotiationSupportRouteImport } from './routes/nigeria.negotiation-support'
+import { Route as NigeriaMaritimeLawRouteImport } from './routes/nigeria.maritime-law'
+import { Route as NigeriaLegalDocumentationRouteImport } from './routes/nigeria.legal-documentation'
+import { Route as NigeriaImmigrationLawRouteImport } from './routes/nigeria.immigration-law'
+import { Route as NigeriaFamilyLawRouteImport } from './routes/nigeria.family-law'
+import { Route as NigeriaEntityCompanyFormationRouteImport } from './routes/nigeria.entity-company-formation'
+import { Route as NigeriaDisputeResolutionRouteImport } from './routes/nigeria.dispute-resolution'
+import { Route as NigeriaCrossRegionalRepresentationRouteImport } from './routes/nigeria.cross-regional-representation'
+import { Route as NigeriaCorporateCommercialLawRouteImport } from './routes/nigeria.corporate-commercial-law'
+import { Route as NigeriaCompanySecretarialServicesRouteImport } from './routes/nigeria.company-secretarial-services'
+import { Route as NigeriaBankingProjectFinanceRouteImport } from './routes/nigeria.banking-project-finance'
+import { Route as InternationalInternationalTransactionsRouteImport } from './routes/international.international-transactions'
+import { Route as InternationalInternationalDisputeResolutionRouteImport } from './routes/international.international-dispute-resolution'
+import { Route as InternationalGlobalComplianceServicesRouteImport } from './routes/international.global-compliance-services'
+import { Route as InternationalForeignInvestmentSupportRouteImport } from './routes/international.foreign-investment-support'
+import { Route as InternationalDiasporaLegalServicesRouteImport } from './routes/international.diaspora-legal-services'
+import { Route as InternationalCrossBorderBusinessRouteImport } from './routes/international.cross-border-business'
+import { Route as IndustriesTechnologyStartupsRouteImport } from './routes/industries.technology-startups'
+import { Route as IndustriesRealEstateRouteImport } from './routes/industries.real-estate'
+import { Route as IndustriesOilAndGasRouteImport } from './routes/industries.oil-and-gas'
+import { Route as IndustriesMaritimeRouteImport } from './routes/industries.maritime'
+import { Route as IndustriesImmigrationRouteImport } from './routes/industries.immigration'
+import { Route as IndustriesBankingFinanceRouteImport } from './routes/industries.banking-finance'
+import { Route as ResourcesBlogSlugRouteImport } from './routes/resources.blog.$slug'
 
+const WhyChooseUsRoute = WhyChooseUsRouteImport.update({
+  id: '/why-choose-us',
+  path: '/why-choose-us',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const UsaRoute = UsaRouteImport.update({
+  id: '/usa',
+  path: '/usa',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TeamRoute = TeamRouteImport.update({
+  id: '/team',
+  path: '/team',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResourcesRoute = ResourcesRouteImport.update({
+  id: '/resources',
+  path: '/resources',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OurApproachRoute = OurApproachRouteImport.update({
+  id: '/our-approach',
+  path: '/our-approach',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NigeriaRoute = NigeriaRouteImport.update({
+  id: '/nigeria',
+  path: '/nigeria',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InternationalRoute = InternationalRouteImport.update({
+  id: '/international',
+  path: '/international',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndustriesRoute = IndustriesRouteImport.update({
+  id: '/industries',
+  path: '/industries',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BookConsultationRoute = BookConsultationRouteImport.update({
+  id: '/book-consultation',
+  path: '/book-consultation',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const UsaTransactionsNegotiationsRoute =
+  UsaTransactionsNegotiationsRouteImport.update({
+    id: '/transactions-negotiations',
+    path: '/transactions-negotiations',
+    getParentRoute: () => UsaRoute,
+  } as any)
+const UsaNigerianOwnedLawFirmTexasRoute =
+  UsaNigerianOwnedLawFirmTexasRouteImport.update({
+    id: '/nigerian-owned-law-firm-texas',
+    path: '/nigerian-owned-law-firm-texas',
+    getParentRoute: () => UsaRoute,
+  } as any)
+const UsaNigerianLawyersInTexasRoute =
+  UsaNigerianLawyersInTexasRouteImport.update({
+    id: '/nigerian-lawyers-in-texas',
+    path: '/nigerian-lawyers-in-texas',
+    getParentRoute: () => UsaRoute,
+  } as any)
+const UsaLegalAdvisoryRoute = UsaLegalAdvisoryRouteImport.update({
+  id: '/legal-advisory',
+  path: '/legal-advisory',
+  getParentRoute: () => UsaRoute,
+} as any)
+const UsaLawyersInMelissaTexasRoute =
+  UsaLawyersInMelissaTexasRouteImport.update({
+    id: '/lawyers-in-melissa-texas',
+    path: '/lawyers-in-melissa-texas',
+    getParentRoute: () => UsaRoute,
+  } as any)
+const UsaInternationalBusinessLawRoute =
+  UsaInternationalBusinessLawRouteImport.update({
+    id: '/international-business-law',
+    path: '/international-business-law',
+    getParentRoute: () => UsaRoute,
+  } as any)
+const UsaDisputeResolutionRoute = UsaDisputeResolutionRouteImport.update({
+  id: '/dispute-resolution',
+  path: '/dispute-resolution',
+  getParentRoute: () => UsaRoute,
+} as any)
+const UsaCrossBorderRepresentationRoute =
+  UsaCrossBorderRepresentationRouteImport.update({
+    id: '/cross-border-representation',
+    path: '/cross-border-representation',
+    getParentRoute: () => UsaRoute,
+  } as any)
+const UsaComplianceSupportRoute = UsaComplianceSupportRouteImport.update({
+  id: '/compliance-support',
+  path: '/compliance-support',
+  getParentRoute: () => UsaRoute,
+} as any)
+const UsaCompanySecretarialServicesRoute =
+  UsaCompanySecretarialServicesRouteImport.update({
+    id: '/company-secretarial-services',
+    path: '/company-secretarial-services',
+    getParentRoute: () => UsaRoute,
+  } as any)
+const UsaCompanyFormationRoute = UsaCompanyFormationRouteImport.update({
+  id: '/company-formation',
+  path: '/company-formation',
+  getParentRoute: () => UsaRoute,
+} as any)
+const ResourcesNewsRoute = ResourcesNewsRouteImport.update({
+  id: '/news',
+  path: '/news',
+  getParentRoute: () => ResourcesRoute,
+} as any)
+const ResourcesLegalGuidesRoute = ResourcesLegalGuidesRouteImport.update({
+  id: '/legal-guides',
+  path: '/legal-guides',
+  getParentRoute: () => ResourcesRoute,
+} as any)
+const ResourcesFaqRoute = ResourcesFaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => ResourcesRoute,
+} as any)
+const ResourcesCaseInsightsRoute = ResourcesCaseInsightsRouteImport.update({
+  id: '/case-insights',
+  path: '/case-insights',
+  getParentRoute: () => ResourcesRoute,
+} as any)
+const ResourcesBlogRoute = ResourcesBlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => ResourcesRoute,
+} as any)
+const NigeriaWillsEstatesRoute = NigeriaWillsEstatesRouteImport.update({
+  id: '/wills-estates',
+  path: '/wills-estates',
+  getParentRoute: () => NigeriaRoute,
+} as any)
+const NigeriaRealEstatePropertyLawRoute =
+  NigeriaRealEstatePropertyLawRouteImport.update({
+    id: '/real-estate-property-law',
+    path: '/real-estate-property-law',
+    getParentRoute: () => NigeriaRoute,
+  } as any)
+const NigeriaOilGasLawRoute = NigeriaOilGasLawRouteImport.update({
+  id: '/oil-gas-law',
+  path: '/oil-gas-law',
+  getParentRoute: () => NigeriaRoute,
+} as any)
+const NigeriaNegotiationSupportRoute =
+  NigeriaNegotiationSupportRouteImport.update({
+    id: '/negotiation-support',
+    path: '/negotiation-support',
+    getParentRoute: () => NigeriaRoute,
+  } as any)
+const NigeriaMaritimeLawRoute = NigeriaMaritimeLawRouteImport.update({
+  id: '/maritime-law',
+  path: '/maritime-law',
+  getParentRoute: () => NigeriaRoute,
+} as any)
+const NigeriaLegalDocumentationRoute =
+  NigeriaLegalDocumentationRouteImport.update({
+    id: '/legal-documentation',
+    path: '/legal-documentation',
+    getParentRoute: () => NigeriaRoute,
+  } as any)
+const NigeriaImmigrationLawRoute = NigeriaImmigrationLawRouteImport.update({
+  id: '/immigration-law',
+  path: '/immigration-law',
+  getParentRoute: () => NigeriaRoute,
+} as any)
+const NigeriaFamilyLawRoute = NigeriaFamilyLawRouteImport.update({
+  id: '/family-law',
+  path: '/family-law',
+  getParentRoute: () => NigeriaRoute,
+} as any)
+const NigeriaEntityCompanyFormationRoute =
+  NigeriaEntityCompanyFormationRouteImport.update({
+    id: '/entity-company-formation',
+    path: '/entity-company-formation',
+    getParentRoute: () => NigeriaRoute,
+  } as any)
+const NigeriaDisputeResolutionRoute =
+  NigeriaDisputeResolutionRouteImport.update({
+    id: '/dispute-resolution',
+    path: '/dispute-resolution',
+    getParentRoute: () => NigeriaRoute,
+  } as any)
+const NigeriaCrossRegionalRepresentationRoute =
+  NigeriaCrossRegionalRepresentationRouteImport.update({
+    id: '/cross-regional-representation',
+    path: '/cross-regional-representation',
+    getParentRoute: () => NigeriaRoute,
+  } as any)
+const NigeriaCorporateCommercialLawRoute =
+  NigeriaCorporateCommercialLawRouteImport.update({
+    id: '/corporate-commercial-law',
+    path: '/corporate-commercial-law',
+    getParentRoute: () => NigeriaRoute,
+  } as any)
+const NigeriaCompanySecretarialServicesRoute =
+  NigeriaCompanySecretarialServicesRouteImport.update({
+    id: '/company-secretarial-services',
+    path: '/company-secretarial-services',
+    getParentRoute: () => NigeriaRoute,
+  } as any)
+const NigeriaBankingProjectFinanceRoute =
+  NigeriaBankingProjectFinanceRouteImport.update({
+    id: '/banking-project-finance',
+    path: '/banking-project-finance',
+    getParentRoute: () => NigeriaRoute,
+  } as any)
+const InternationalInternationalTransactionsRoute =
+  InternationalInternationalTransactionsRouteImport.update({
+    id: '/international-transactions',
+    path: '/international-transactions',
+    getParentRoute: () => InternationalRoute,
+  } as any)
+const InternationalInternationalDisputeResolutionRoute =
+  InternationalInternationalDisputeResolutionRouteImport.update({
+    id: '/international-dispute-resolution',
+    path: '/international-dispute-resolution',
+    getParentRoute: () => InternationalRoute,
+  } as any)
+const InternationalGlobalComplianceServicesRoute =
+  InternationalGlobalComplianceServicesRouteImport.update({
+    id: '/global-compliance-services',
+    path: '/global-compliance-services',
+    getParentRoute: () => InternationalRoute,
+  } as any)
+const InternationalForeignInvestmentSupportRoute =
+  InternationalForeignInvestmentSupportRouteImport.update({
+    id: '/foreign-investment-support',
+    path: '/foreign-investment-support',
+    getParentRoute: () => InternationalRoute,
+  } as any)
+const InternationalDiasporaLegalServicesRoute =
+  InternationalDiasporaLegalServicesRouteImport.update({
+    id: '/diaspora-legal-services',
+    path: '/diaspora-legal-services',
+    getParentRoute: () => InternationalRoute,
+  } as any)
+const InternationalCrossBorderBusinessRoute =
+  InternationalCrossBorderBusinessRouteImport.update({
+    id: '/cross-border-business',
+    path: '/cross-border-business',
+    getParentRoute: () => InternationalRoute,
+  } as any)
+const IndustriesTechnologyStartupsRoute =
+  IndustriesTechnologyStartupsRouteImport.update({
+    id: '/technology-startups',
+    path: '/technology-startups',
+    getParentRoute: () => IndustriesRoute,
+  } as any)
+const IndustriesRealEstateRoute = IndustriesRealEstateRouteImport.update({
+  id: '/real-estate',
+  path: '/real-estate',
+  getParentRoute: () => IndustriesRoute,
+} as any)
+const IndustriesOilAndGasRoute = IndustriesOilAndGasRouteImport.update({
+  id: '/oil-and-gas',
+  path: '/oil-and-gas',
+  getParentRoute: () => IndustriesRoute,
+} as any)
+const IndustriesMaritimeRoute = IndustriesMaritimeRouteImport.update({
+  id: '/maritime',
+  path: '/maritime',
+  getParentRoute: () => IndustriesRoute,
+} as any)
+const IndustriesImmigrationRoute = IndustriesImmigrationRouteImport.update({
+  id: '/immigration',
+  path: '/immigration',
+  getParentRoute: () => IndustriesRoute,
+} as any)
+const IndustriesBankingFinanceRoute =
+  IndustriesBankingFinanceRouteImport.update({
+    id: '/banking-finance',
+    path: '/banking-finance',
+    getParentRoute: () => IndustriesRoute,
+  } as any)
+const ResourcesBlogSlugRoute = ResourcesBlogSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => ResourcesBlogRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/book-consultation': typeof BookConsultationRoute
+  '/contact': typeof ContactRoute
+  '/industries': typeof IndustriesRouteWithChildren
+  '/international': typeof InternationalRouteWithChildren
+  '/nigeria': typeof NigeriaRouteWithChildren
+  '/our-approach': typeof OurApproachRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/resources': typeof ResourcesRouteWithChildren
+  '/team': typeof TeamRoute
+  '/usa': typeof UsaRouteWithChildren
+  '/why-choose-us': typeof WhyChooseUsRoute
+  '/industries/banking-finance': typeof IndustriesBankingFinanceRoute
+  '/industries/immigration': typeof IndustriesImmigrationRoute
+  '/industries/maritime': typeof IndustriesMaritimeRoute
+  '/industries/oil-and-gas': typeof IndustriesOilAndGasRoute
+  '/industries/real-estate': typeof IndustriesRealEstateRoute
+  '/industries/technology-startups': typeof IndustriesTechnologyStartupsRoute
+  '/international/cross-border-business': typeof InternationalCrossBorderBusinessRoute
+  '/international/diaspora-legal-services': typeof InternationalDiasporaLegalServicesRoute
+  '/international/foreign-investment-support': typeof InternationalForeignInvestmentSupportRoute
+  '/international/global-compliance-services': typeof InternationalGlobalComplianceServicesRoute
+  '/international/international-dispute-resolution': typeof InternationalInternationalDisputeResolutionRoute
+  '/international/international-transactions': typeof InternationalInternationalTransactionsRoute
+  '/nigeria/banking-project-finance': typeof NigeriaBankingProjectFinanceRoute
+  '/nigeria/company-secretarial-services': typeof NigeriaCompanySecretarialServicesRoute
+  '/nigeria/corporate-commercial-law': typeof NigeriaCorporateCommercialLawRoute
+  '/nigeria/cross-regional-representation': typeof NigeriaCrossRegionalRepresentationRoute
+  '/nigeria/dispute-resolution': typeof NigeriaDisputeResolutionRoute
+  '/nigeria/entity-company-formation': typeof NigeriaEntityCompanyFormationRoute
+  '/nigeria/family-law': typeof NigeriaFamilyLawRoute
+  '/nigeria/immigration-law': typeof NigeriaImmigrationLawRoute
+  '/nigeria/legal-documentation': typeof NigeriaLegalDocumentationRoute
+  '/nigeria/maritime-law': typeof NigeriaMaritimeLawRoute
+  '/nigeria/negotiation-support': typeof NigeriaNegotiationSupportRoute
+  '/nigeria/oil-gas-law': typeof NigeriaOilGasLawRoute
+  '/nigeria/real-estate-property-law': typeof NigeriaRealEstatePropertyLawRoute
+  '/nigeria/wills-estates': typeof NigeriaWillsEstatesRoute
+  '/resources/blog': typeof ResourcesBlogRouteWithChildren
+  '/resources/case-insights': typeof ResourcesCaseInsightsRoute
+  '/resources/faq': typeof ResourcesFaqRoute
+  '/resources/legal-guides': typeof ResourcesLegalGuidesRoute
+  '/resources/news': typeof ResourcesNewsRoute
+  '/usa/company-formation': typeof UsaCompanyFormationRoute
+  '/usa/company-secretarial-services': typeof UsaCompanySecretarialServicesRoute
+  '/usa/compliance-support': typeof UsaComplianceSupportRoute
+  '/usa/cross-border-representation': typeof UsaCrossBorderRepresentationRoute
+  '/usa/dispute-resolution': typeof UsaDisputeResolutionRoute
+  '/usa/international-business-law': typeof UsaInternationalBusinessLawRoute
+  '/usa/lawyers-in-melissa-texas': typeof UsaLawyersInMelissaTexasRoute
+  '/usa/legal-advisory': typeof UsaLegalAdvisoryRoute
+  '/usa/nigerian-lawyers-in-texas': typeof UsaNigerianLawyersInTexasRoute
+  '/usa/nigerian-owned-law-firm-texas': typeof UsaNigerianOwnedLawFirmTexasRoute
+  '/usa/transactions-negotiations': typeof UsaTransactionsNegotiationsRoute
+  '/resources/blog/$slug': typeof ResourcesBlogSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/book-consultation': typeof BookConsultationRoute
+  '/contact': typeof ContactRoute
+  '/industries': typeof IndustriesRouteWithChildren
+  '/international': typeof InternationalRouteWithChildren
+  '/nigeria': typeof NigeriaRouteWithChildren
+  '/our-approach': typeof OurApproachRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/resources': typeof ResourcesRouteWithChildren
+  '/team': typeof TeamRoute
+  '/usa': typeof UsaRouteWithChildren
+  '/why-choose-us': typeof WhyChooseUsRoute
+  '/industries/banking-finance': typeof IndustriesBankingFinanceRoute
+  '/industries/immigration': typeof IndustriesImmigrationRoute
+  '/industries/maritime': typeof IndustriesMaritimeRoute
+  '/industries/oil-and-gas': typeof IndustriesOilAndGasRoute
+  '/industries/real-estate': typeof IndustriesRealEstateRoute
+  '/industries/technology-startups': typeof IndustriesTechnologyStartupsRoute
+  '/international/cross-border-business': typeof InternationalCrossBorderBusinessRoute
+  '/international/diaspora-legal-services': typeof InternationalDiasporaLegalServicesRoute
+  '/international/foreign-investment-support': typeof InternationalForeignInvestmentSupportRoute
+  '/international/global-compliance-services': typeof InternationalGlobalComplianceServicesRoute
+  '/international/international-dispute-resolution': typeof InternationalInternationalDisputeResolutionRoute
+  '/international/international-transactions': typeof InternationalInternationalTransactionsRoute
+  '/nigeria/banking-project-finance': typeof NigeriaBankingProjectFinanceRoute
+  '/nigeria/company-secretarial-services': typeof NigeriaCompanySecretarialServicesRoute
+  '/nigeria/corporate-commercial-law': typeof NigeriaCorporateCommercialLawRoute
+  '/nigeria/cross-regional-representation': typeof NigeriaCrossRegionalRepresentationRoute
+  '/nigeria/dispute-resolution': typeof NigeriaDisputeResolutionRoute
+  '/nigeria/entity-company-formation': typeof NigeriaEntityCompanyFormationRoute
+  '/nigeria/family-law': typeof NigeriaFamilyLawRoute
+  '/nigeria/immigration-law': typeof NigeriaImmigrationLawRoute
+  '/nigeria/legal-documentation': typeof NigeriaLegalDocumentationRoute
+  '/nigeria/maritime-law': typeof NigeriaMaritimeLawRoute
+  '/nigeria/negotiation-support': typeof NigeriaNegotiationSupportRoute
+  '/nigeria/oil-gas-law': typeof NigeriaOilGasLawRoute
+  '/nigeria/real-estate-property-law': typeof NigeriaRealEstatePropertyLawRoute
+  '/nigeria/wills-estates': typeof NigeriaWillsEstatesRoute
+  '/resources/blog': typeof ResourcesBlogRouteWithChildren
+  '/resources/case-insights': typeof ResourcesCaseInsightsRoute
+  '/resources/faq': typeof ResourcesFaqRoute
+  '/resources/legal-guides': typeof ResourcesLegalGuidesRoute
+  '/resources/news': typeof ResourcesNewsRoute
+  '/usa/company-formation': typeof UsaCompanyFormationRoute
+  '/usa/company-secretarial-services': typeof UsaCompanySecretarialServicesRoute
+  '/usa/compliance-support': typeof UsaComplianceSupportRoute
+  '/usa/cross-border-representation': typeof UsaCrossBorderRepresentationRoute
+  '/usa/dispute-resolution': typeof UsaDisputeResolutionRoute
+  '/usa/international-business-law': typeof UsaInternationalBusinessLawRoute
+  '/usa/lawyers-in-melissa-texas': typeof UsaLawyersInMelissaTexasRoute
+  '/usa/legal-advisory': typeof UsaLegalAdvisoryRoute
+  '/usa/nigerian-lawyers-in-texas': typeof UsaNigerianLawyersInTexasRoute
+  '/usa/nigerian-owned-law-firm-texas': typeof UsaNigerianOwnedLawFirmTexasRoute
+  '/usa/transactions-negotiations': typeof UsaTransactionsNegotiationsRoute
+  '/resources/blog/$slug': typeof ResourcesBlogSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/book-consultation': typeof BookConsultationRoute
+  '/contact': typeof ContactRoute
+  '/industries': typeof IndustriesRouteWithChildren
+  '/international': typeof InternationalRouteWithChildren
+  '/nigeria': typeof NigeriaRouteWithChildren
+  '/our-approach': typeof OurApproachRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/resources': typeof ResourcesRouteWithChildren
+  '/team': typeof TeamRoute
+  '/usa': typeof UsaRouteWithChildren
+  '/why-choose-us': typeof WhyChooseUsRoute
+  '/industries/banking-finance': typeof IndustriesBankingFinanceRoute
+  '/industries/immigration': typeof IndustriesImmigrationRoute
+  '/industries/maritime': typeof IndustriesMaritimeRoute
+  '/industries/oil-and-gas': typeof IndustriesOilAndGasRoute
+  '/industries/real-estate': typeof IndustriesRealEstateRoute
+  '/industries/technology-startups': typeof IndustriesTechnologyStartupsRoute
+  '/international/cross-border-business': typeof InternationalCrossBorderBusinessRoute
+  '/international/diaspora-legal-services': typeof InternationalDiasporaLegalServicesRoute
+  '/international/foreign-investment-support': typeof InternationalForeignInvestmentSupportRoute
+  '/international/global-compliance-services': typeof InternationalGlobalComplianceServicesRoute
+  '/international/international-dispute-resolution': typeof InternationalInternationalDisputeResolutionRoute
+  '/international/international-transactions': typeof InternationalInternationalTransactionsRoute
+  '/nigeria/banking-project-finance': typeof NigeriaBankingProjectFinanceRoute
+  '/nigeria/company-secretarial-services': typeof NigeriaCompanySecretarialServicesRoute
+  '/nigeria/corporate-commercial-law': typeof NigeriaCorporateCommercialLawRoute
+  '/nigeria/cross-regional-representation': typeof NigeriaCrossRegionalRepresentationRoute
+  '/nigeria/dispute-resolution': typeof NigeriaDisputeResolutionRoute
+  '/nigeria/entity-company-formation': typeof NigeriaEntityCompanyFormationRoute
+  '/nigeria/family-law': typeof NigeriaFamilyLawRoute
+  '/nigeria/immigration-law': typeof NigeriaImmigrationLawRoute
+  '/nigeria/legal-documentation': typeof NigeriaLegalDocumentationRoute
+  '/nigeria/maritime-law': typeof NigeriaMaritimeLawRoute
+  '/nigeria/negotiation-support': typeof NigeriaNegotiationSupportRoute
+  '/nigeria/oil-gas-law': typeof NigeriaOilGasLawRoute
+  '/nigeria/real-estate-property-law': typeof NigeriaRealEstatePropertyLawRoute
+  '/nigeria/wills-estates': typeof NigeriaWillsEstatesRoute
+  '/resources/blog': typeof ResourcesBlogRouteWithChildren
+  '/resources/case-insights': typeof ResourcesCaseInsightsRoute
+  '/resources/faq': typeof ResourcesFaqRoute
+  '/resources/legal-guides': typeof ResourcesLegalGuidesRoute
+  '/resources/news': typeof ResourcesNewsRoute
+  '/usa/company-formation': typeof UsaCompanyFormationRoute
+  '/usa/company-secretarial-services': typeof UsaCompanySecretarialServicesRoute
+  '/usa/compliance-support': typeof UsaComplianceSupportRoute
+  '/usa/cross-border-representation': typeof UsaCrossBorderRepresentationRoute
+  '/usa/dispute-resolution': typeof UsaDisputeResolutionRoute
+  '/usa/international-business-law': typeof UsaInternationalBusinessLawRoute
+  '/usa/lawyers-in-melissa-texas': typeof UsaLawyersInMelissaTexasRoute
+  '/usa/legal-advisory': typeof UsaLegalAdvisoryRoute
+  '/usa/nigerian-lawyers-in-texas': typeof UsaNigerianLawyersInTexasRoute
+  '/usa/nigerian-owned-law-firm-texas': typeof UsaNigerianOwnedLawFirmTexasRoute
+  '/usa/transactions-negotiations': typeof UsaTransactionsNegotiationsRoute
+  '/resources/blog/$slug': typeof ResourcesBlogSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/book-consultation'
+    | '/contact'
+    | '/industries'
+    | '/international'
+    | '/nigeria'
+    | '/our-approach'
+    | '/privacy-policy'
+    | '/resources'
+    | '/team'
+    | '/usa'
+    | '/why-choose-us'
+    | '/industries/banking-finance'
+    | '/industries/immigration'
+    | '/industries/maritime'
+    | '/industries/oil-and-gas'
+    | '/industries/real-estate'
+    | '/industries/technology-startups'
+    | '/international/cross-border-business'
+    | '/international/diaspora-legal-services'
+    | '/international/foreign-investment-support'
+    | '/international/global-compliance-services'
+    | '/international/international-dispute-resolution'
+    | '/international/international-transactions'
+    | '/nigeria/banking-project-finance'
+    | '/nigeria/company-secretarial-services'
+    | '/nigeria/corporate-commercial-law'
+    | '/nigeria/cross-regional-representation'
+    | '/nigeria/dispute-resolution'
+    | '/nigeria/entity-company-formation'
+    | '/nigeria/family-law'
+    | '/nigeria/immigration-law'
+    | '/nigeria/legal-documentation'
+    | '/nigeria/maritime-law'
+    | '/nigeria/negotiation-support'
+    | '/nigeria/oil-gas-law'
+    | '/nigeria/real-estate-property-law'
+    | '/nigeria/wills-estates'
+    | '/resources/blog'
+    | '/resources/case-insights'
+    | '/resources/faq'
+    | '/resources/legal-guides'
+    | '/resources/news'
+    | '/usa/company-formation'
+    | '/usa/company-secretarial-services'
+    | '/usa/compliance-support'
+    | '/usa/cross-border-representation'
+    | '/usa/dispute-resolution'
+    | '/usa/international-business-law'
+    | '/usa/lawyers-in-melissa-texas'
+    | '/usa/legal-advisory'
+    | '/usa/nigerian-lawyers-in-texas'
+    | '/usa/nigerian-owned-law-firm-texas'
+    | '/usa/transactions-negotiations'
+    | '/resources/blog/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/book-consultation'
+    | '/contact'
+    | '/industries'
+    | '/international'
+    | '/nigeria'
+    | '/our-approach'
+    | '/privacy-policy'
+    | '/resources'
+    | '/team'
+    | '/usa'
+    | '/why-choose-us'
+    | '/industries/banking-finance'
+    | '/industries/immigration'
+    | '/industries/maritime'
+    | '/industries/oil-and-gas'
+    | '/industries/real-estate'
+    | '/industries/technology-startups'
+    | '/international/cross-border-business'
+    | '/international/diaspora-legal-services'
+    | '/international/foreign-investment-support'
+    | '/international/global-compliance-services'
+    | '/international/international-dispute-resolution'
+    | '/international/international-transactions'
+    | '/nigeria/banking-project-finance'
+    | '/nigeria/company-secretarial-services'
+    | '/nigeria/corporate-commercial-law'
+    | '/nigeria/cross-regional-representation'
+    | '/nigeria/dispute-resolution'
+    | '/nigeria/entity-company-formation'
+    | '/nigeria/family-law'
+    | '/nigeria/immigration-law'
+    | '/nigeria/legal-documentation'
+    | '/nigeria/maritime-law'
+    | '/nigeria/negotiation-support'
+    | '/nigeria/oil-gas-law'
+    | '/nigeria/real-estate-property-law'
+    | '/nigeria/wills-estates'
+    | '/resources/blog'
+    | '/resources/case-insights'
+    | '/resources/faq'
+    | '/resources/legal-guides'
+    | '/resources/news'
+    | '/usa/company-formation'
+    | '/usa/company-secretarial-services'
+    | '/usa/compliance-support'
+    | '/usa/cross-border-representation'
+    | '/usa/dispute-resolution'
+    | '/usa/international-business-law'
+    | '/usa/lawyers-in-melissa-texas'
+    | '/usa/legal-advisory'
+    | '/usa/nigerian-lawyers-in-texas'
+    | '/usa/nigerian-owned-law-firm-texas'
+    | '/usa/transactions-negotiations'
+    | '/resources/blog/$slug'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/book-consultation'
+    | '/contact'
+    | '/industries'
+    | '/international'
+    | '/nigeria'
+    | '/our-approach'
+    | '/privacy-policy'
+    | '/resources'
+    | '/team'
+    | '/usa'
+    | '/why-choose-us'
+    | '/industries/banking-finance'
+    | '/industries/immigration'
+    | '/industries/maritime'
+    | '/industries/oil-and-gas'
+    | '/industries/real-estate'
+    | '/industries/technology-startups'
+    | '/international/cross-border-business'
+    | '/international/diaspora-legal-services'
+    | '/international/foreign-investment-support'
+    | '/international/global-compliance-services'
+    | '/international/international-dispute-resolution'
+    | '/international/international-transactions'
+    | '/nigeria/banking-project-finance'
+    | '/nigeria/company-secretarial-services'
+    | '/nigeria/corporate-commercial-law'
+    | '/nigeria/cross-regional-representation'
+    | '/nigeria/dispute-resolution'
+    | '/nigeria/entity-company-formation'
+    | '/nigeria/family-law'
+    | '/nigeria/immigration-law'
+    | '/nigeria/legal-documentation'
+    | '/nigeria/maritime-law'
+    | '/nigeria/negotiation-support'
+    | '/nigeria/oil-gas-law'
+    | '/nigeria/real-estate-property-law'
+    | '/nigeria/wills-estates'
+    | '/resources/blog'
+    | '/resources/case-insights'
+    | '/resources/faq'
+    | '/resources/legal-guides'
+    | '/resources/news'
+    | '/usa/company-formation'
+    | '/usa/company-secretarial-services'
+    | '/usa/compliance-support'
+    | '/usa/cross-border-representation'
+    | '/usa/dispute-resolution'
+    | '/usa/international-business-law'
+    | '/usa/lawyers-in-melissa-texas'
+    | '/usa/legal-advisory'
+    | '/usa/nigerian-lawyers-in-texas'
+    | '/usa/nigerian-owned-law-firm-texas'
+    | '/usa/transactions-negotiations'
+    | '/resources/blog/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  BookConsultationRoute: typeof BookConsultationRoute
+  ContactRoute: typeof ContactRoute
+  IndustriesRoute: typeof IndustriesRouteWithChildren
+  InternationalRoute: typeof InternationalRouteWithChildren
+  NigeriaRoute: typeof NigeriaRouteWithChildren
+  OurApproachRoute: typeof OurApproachRoute
+  PrivacyPolicyRoute: typeof PrivacyPolicyRoute
+  ResourcesRoute: typeof ResourcesRouteWithChildren
+  TeamRoute: typeof TeamRoute
+  UsaRoute: typeof UsaRouteWithChildren
+  WhyChooseUsRoute: typeof WhyChooseUsRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/why-choose-us': {
+      id: '/why-choose-us'
+      path: '/why-choose-us'
+      fullPath: '/why-choose-us'
+      preLoaderRoute: typeof WhyChooseUsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/usa': {
+      id: '/usa'
+      path: '/usa'
+      fullPath: '/usa'
+      preLoaderRoute: typeof UsaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/team': {
+      id: '/team'
+      path: '/team'
+      fullPath: '/team'
+      preLoaderRoute: typeof TeamRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources': {
+      id: '/resources'
+      path: '/resources'
+      fullPath: '/resources'
+      preLoaderRoute: typeof ResourcesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/our-approach': {
+      id: '/our-approach'
+      path: '/our-approach'
+      fullPath: '/our-approach'
+      preLoaderRoute: typeof OurApproachRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/nigeria': {
+      id: '/nigeria'
+      path: '/nigeria'
+      fullPath: '/nigeria'
+      preLoaderRoute: typeof NigeriaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/international': {
+      id: '/international'
+      path: '/international'
+      fullPath: '/international'
+      preLoaderRoute: typeof InternationalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/industries': {
+      id: '/industries'
+      path: '/industries'
+      fullPath: '/industries'
+      preLoaderRoute: typeof IndustriesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/book-consultation': {
+      id: '/book-consultation'
+      path: '/book-consultation'
+      fullPath: '/book-consultation'
+      preLoaderRoute: typeof BookConsultationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,11 +832,474 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/usa/transactions-negotiations': {
+      id: '/usa/transactions-negotiations'
+      path: '/transactions-negotiations'
+      fullPath: '/usa/transactions-negotiations'
+      preLoaderRoute: typeof UsaTransactionsNegotiationsRouteImport
+      parentRoute: typeof UsaRoute
+    }
+    '/usa/nigerian-owned-law-firm-texas': {
+      id: '/usa/nigerian-owned-law-firm-texas'
+      path: '/nigerian-owned-law-firm-texas'
+      fullPath: '/usa/nigerian-owned-law-firm-texas'
+      preLoaderRoute: typeof UsaNigerianOwnedLawFirmTexasRouteImport
+      parentRoute: typeof UsaRoute
+    }
+    '/usa/nigerian-lawyers-in-texas': {
+      id: '/usa/nigerian-lawyers-in-texas'
+      path: '/nigerian-lawyers-in-texas'
+      fullPath: '/usa/nigerian-lawyers-in-texas'
+      preLoaderRoute: typeof UsaNigerianLawyersInTexasRouteImport
+      parentRoute: typeof UsaRoute
+    }
+    '/usa/legal-advisory': {
+      id: '/usa/legal-advisory'
+      path: '/legal-advisory'
+      fullPath: '/usa/legal-advisory'
+      preLoaderRoute: typeof UsaLegalAdvisoryRouteImport
+      parentRoute: typeof UsaRoute
+    }
+    '/usa/lawyers-in-melissa-texas': {
+      id: '/usa/lawyers-in-melissa-texas'
+      path: '/lawyers-in-melissa-texas'
+      fullPath: '/usa/lawyers-in-melissa-texas'
+      preLoaderRoute: typeof UsaLawyersInMelissaTexasRouteImport
+      parentRoute: typeof UsaRoute
+    }
+    '/usa/international-business-law': {
+      id: '/usa/international-business-law'
+      path: '/international-business-law'
+      fullPath: '/usa/international-business-law'
+      preLoaderRoute: typeof UsaInternationalBusinessLawRouteImport
+      parentRoute: typeof UsaRoute
+    }
+    '/usa/dispute-resolution': {
+      id: '/usa/dispute-resolution'
+      path: '/dispute-resolution'
+      fullPath: '/usa/dispute-resolution'
+      preLoaderRoute: typeof UsaDisputeResolutionRouteImport
+      parentRoute: typeof UsaRoute
+    }
+    '/usa/cross-border-representation': {
+      id: '/usa/cross-border-representation'
+      path: '/cross-border-representation'
+      fullPath: '/usa/cross-border-representation'
+      preLoaderRoute: typeof UsaCrossBorderRepresentationRouteImport
+      parentRoute: typeof UsaRoute
+    }
+    '/usa/compliance-support': {
+      id: '/usa/compliance-support'
+      path: '/compliance-support'
+      fullPath: '/usa/compliance-support'
+      preLoaderRoute: typeof UsaComplianceSupportRouteImport
+      parentRoute: typeof UsaRoute
+    }
+    '/usa/company-secretarial-services': {
+      id: '/usa/company-secretarial-services'
+      path: '/company-secretarial-services'
+      fullPath: '/usa/company-secretarial-services'
+      preLoaderRoute: typeof UsaCompanySecretarialServicesRouteImport
+      parentRoute: typeof UsaRoute
+    }
+    '/usa/company-formation': {
+      id: '/usa/company-formation'
+      path: '/company-formation'
+      fullPath: '/usa/company-formation'
+      preLoaderRoute: typeof UsaCompanyFormationRouteImport
+      parentRoute: typeof UsaRoute
+    }
+    '/resources/news': {
+      id: '/resources/news'
+      path: '/news'
+      fullPath: '/resources/news'
+      preLoaderRoute: typeof ResourcesNewsRouteImport
+      parentRoute: typeof ResourcesRoute
+    }
+    '/resources/legal-guides': {
+      id: '/resources/legal-guides'
+      path: '/legal-guides'
+      fullPath: '/resources/legal-guides'
+      preLoaderRoute: typeof ResourcesLegalGuidesRouteImport
+      parentRoute: typeof ResourcesRoute
+    }
+    '/resources/faq': {
+      id: '/resources/faq'
+      path: '/faq'
+      fullPath: '/resources/faq'
+      preLoaderRoute: typeof ResourcesFaqRouteImport
+      parentRoute: typeof ResourcesRoute
+    }
+    '/resources/case-insights': {
+      id: '/resources/case-insights'
+      path: '/case-insights'
+      fullPath: '/resources/case-insights'
+      preLoaderRoute: typeof ResourcesCaseInsightsRouteImport
+      parentRoute: typeof ResourcesRoute
+    }
+    '/resources/blog': {
+      id: '/resources/blog'
+      path: '/blog'
+      fullPath: '/resources/blog'
+      preLoaderRoute: typeof ResourcesBlogRouteImport
+      parentRoute: typeof ResourcesRoute
+    }
+    '/nigeria/wills-estates': {
+      id: '/nigeria/wills-estates'
+      path: '/wills-estates'
+      fullPath: '/nigeria/wills-estates'
+      preLoaderRoute: typeof NigeriaWillsEstatesRouteImport
+      parentRoute: typeof NigeriaRoute
+    }
+    '/nigeria/real-estate-property-law': {
+      id: '/nigeria/real-estate-property-law'
+      path: '/real-estate-property-law'
+      fullPath: '/nigeria/real-estate-property-law'
+      preLoaderRoute: typeof NigeriaRealEstatePropertyLawRouteImport
+      parentRoute: typeof NigeriaRoute
+    }
+    '/nigeria/oil-gas-law': {
+      id: '/nigeria/oil-gas-law'
+      path: '/oil-gas-law'
+      fullPath: '/nigeria/oil-gas-law'
+      preLoaderRoute: typeof NigeriaOilGasLawRouteImport
+      parentRoute: typeof NigeriaRoute
+    }
+    '/nigeria/negotiation-support': {
+      id: '/nigeria/negotiation-support'
+      path: '/negotiation-support'
+      fullPath: '/nigeria/negotiation-support'
+      preLoaderRoute: typeof NigeriaNegotiationSupportRouteImport
+      parentRoute: typeof NigeriaRoute
+    }
+    '/nigeria/maritime-law': {
+      id: '/nigeria/maritime-law'
+      path: '/maritime-law'
+      fullPath: '/nigeria/maritime-law'
+      preLoaderRoute: typeof NigeriaMaritimeLawRouteImport
+      parentRoute: typeof NigeriaRoute
+    }
+    '/nigeria/legal-documentation': {
+      id: '/nigeria/legal-documentation'
+      path: '/legal-documentation'
+      fullPath: '/nigeria/legal-documentation'
+      preLoaderRoute: typeof NigeriaLegalDocumentationRouteImport
+      parentRoute: typeof NigeriaRoute
+    }
+    '/nigeria/immigration-law': {
+      id: '/nigeria/immigration-law'
+      path: '/immigration-law'
+      fullPath: '/nigeria/immigration-law'
+      preLoaderRoute: typeof NigeriaImmigrationLawRouteImport
+      parentRoute: typeof NigeriaRoute
+    }
+    '/nigeria/family-law': {
+      id: '/nigeria/family-law'
+      path: '/family-law'
+      fullPath: '/nigeria/family-law'
+      preLoaderRoute: typeof NigeriaFamilyLawRouteImport
+      parentRoute: typeof NigeriaRoute
+    }
+    '/nigeria/entity-company-formation': {
+      id: '/nigeria/entity-company-formation'
+      path: '/entity-company-formation'
+      fullPath: '/nigeria/entity-company-formation'
+      preLoaderRoute: typeof NigeriaEntityCompanyFormationRouteImport
+      parentRoute: typeof NigeriaRoute
+    }
+    '/nigeria/dispute-resolution': {
+      id: '/nigeria/dispute-resolution'
+      path: '/dispute-resolution'
+      fullPath: '/nigeria/dispute-resolution'
+      preLoaderRoute: typeof NigeriaDisputeResolutionRouteImport
+      parentRoute: typeof NigeriaRoute
+    }
+    '/nigeria/cross-regional-representation': {
+      id: '/nigeria/cross-regional-representation'
+      path: '/cross-regional-representation'
+      fullPath: '/nigeria/cross-regional-representation'
+      preLoaderRoute: typeof NigeriaCrossRegionalRepresentationRouteImport
+      parentRoute: typeof NigeriaRoute
+    }
+    '/nigeria/corporate-commercial-law': {
+      id: '/nigeria/corporate-commercial-law'
+      path: '/corporate-commercial-law'
+      fullPath: '/nigeria/corporate-commercial-law'
+      preLoaderRoute: typeof NigeriaCorporateCommercialLawRouteImport
+      parentRoute: typeof NigeriaRoute
+    }
+    '/nigeria/company-secretarial-services': {
+      id: '/nigeria/company-secretarial-services'
+      path: '/company-secretarial-services'
+      fullPath: '/nigeria/company-secretarial-services'
+      preLoaderRoute: typeof NigeriaCompanySecretarialServicesRouteImport
+      parentRoute: typeof NigeriaRoute
+    }
+    '/nigeria/banking-project-finance': {
+      id: '/nigeria/banking-project-finance'
+      path: '/banking-project-finance'
+      fullPath: '/nigeria/banking-project-finance'
+      preLoaderRoute: typeof NigeriaBankingProjectFinanceRouteImport
+      parentRoute: typeof NigeriaRoute
+    }
+    '/international/international-transactions': {
+      id: '/international/international-transactions'
+      path: '/international-transactions'
+      fullPath: '/international/international-transactions'
+      preLoaderRoute: typeof InternationalInternationalTransactionsRouteImport
+      parentRoute: typeof InternationalRoute
+    }
+    '/international/international-dispute-resolution': {
+      id: '/international/international-dispute-resolution'
+      path: '/international-dispute-resolution'
+      fullPath: '/international/international-dispute-resolution'
+      preLoaderRoute: typeof InternationalInternationalDisputeResolutionRouteImport
+      parentRoute: typeof InternationalRoute
+    }
+    '/international/global-compliance-services': {
+      id: '/international/global-compliance-services'
+      path: '/global-compliance-services'
+      fullPath: '/international/global-compliance-services'
+      preLoaderRoute: typeof InternationalGlobalComplianceServicesRouteImport
+      parentRoute: typeof InternationalRoute
+    }
+    '/international/foreign-investment-support': {
+      id: '/international/foreign-investment-support'
+      path: '/foreign-investment-support'
+      fullPath: '/international/foreign-investment-support'
+      preLoaderRoute: typeof InternationalForeignInvestmentSupportRouteImport
+      parentRoute: typeof InternationalRoute
+    }
+    '/international/diaspora-legal-services': {
+      id: '/international/diaspora-legal-services'
+      path: '/diaspora-legal-services'
+      fullPath: '/international/diaspora-legal-services'
+      preLoaderRoute: typeof InternationalDiasporaLegalServicesRouteImport
+      parentRoute: typeof InternationalRoute
+    }
+    '/international/cross-border-business': {
+      id: '/international/cross-border-business'
+      path: '/cross-border-business'
+      fullPath: '/international/cross-border-business'
+      preLoaderRoute: typeof InternationalCrossBorderBusinessRouteImport
+      parentRoute: typeof InternationalRoute
+    }
+    '/industries/technology-startups': {
+      id: '/industries/technology-startups'
+      path: '/technology-startups'
+      fullPath: '/industries/technology-startups'
+      preLoaderRoute: typeof IndustriesTechnologyStartupsRouteImport
+      parentRoute: typeof IndustriesRoute
+    }
+    '/industries/real-estate': {
+      id: '/industries/real-estate'
+      path: '/real-estate'
+      fullPath: '/industries/real-estate'
+      preLoaderRoute: typeof IndustriesRealEstateRouteImport
+      parentRoute: typeof IndustriesRoute
+    }
+    '/industries/oil-and-gas': {
+      id: '/industries/oil-and-gas'
+      path: '/oil-and-gas'
+      fullPath: '/industries/oil-and-gas'
+      preLoaderRoute: typeof IndustriesOilAndGasRouteImport
+      parentRoute: typeof IndustriesRoute
+    }
+    '/industries/maritime': {
+      id: '/industries/maritime'
+      path: '/maritime'
+      fullPath: '/industries/maritime'
+      preLoaderRoute: typeof IndustriesMaritimeRouteImport
+      parentRoute: typeof IndustriesRoute
+    }
+    '/industries/immigration': {
+      id: '/industries/immigration'
+      path: '/immigration'
+      fullPath: '/industries/immigration'
+      preLoaderRoute: typeof IndustriesImmigrationRouteImport
+      parentRoute: typeof IndustriesRoute
+    }
+    '/industries/banking-finance': {
+      id: '/industries/banking-finance'
+      path: '/banking-finance'
+      fullPath: '/industries/banking-finance'
+      preLoaderRoute: typeof IndustriesBankingFinanceRouteImport
+      parentRoute: typeof IndustriesRoute
+    }
+    '/resources/blog/$slug': {
+      id: '/resources/blog/$slug'
+      path: '/$slug'
+      fullPath: '/resources/blog/$slug'
+      preLoaderRoute: typeof ResourcesBlogSlugRouteImport
+      parentRoute: typeof ResourcesBlogRoute
+    }
   }
 }
 
+interface IndustriesRouteChildren {
+  IndustriesBankingFinanceRoute: typeof IndustriesBankingFinanceRoute
+  IndustriesImmigrationRoute: typeof IndustriesImmigrationRoute
+  IndustriesMaritimeRoute: typeof IndustriesMaritimeRoute
+  IndustriesOilAndGasRoute: typeof IndustriesOilAndGasRoute
+  IndustriesRealEstateRoute: typeof IndustriesRealEstateRoute
+  IndustriesTechnologyStartupsRoute: typeof IndustriesTechnologyStartupsRoute
+}
+
+const IndustriesRouteChildren: IndustriesRouteChildren = {
+  IndustriesBankingFinanceRoute: IndustriesBankingFinanceRoute,
+  IndustriesImmigrationRoute: IndustriesImmigrationRoute,
+  IndustriesMaritimeRoute: IndustriesMaritimeRoute,
+  IndustriesOilAndGasRoute: IndustriesOilAndGasRoute,
+  IndustriesRealEstateRoute: IndustriesRealEstateRoute,
+  IndustriesTechnologyStartupsRoute: IndustriesTechnologyStartupsRoute,
+}
+
+const IndustriesRouteWithChildren = IndustriesRoute._addFileChildren(
+  IndustriesRouteChildren,
+)
+
+interface InternationalRouteChildren {
+  InternationalCrossBorderBusinessRoute: typeof InternationalCrossBorderBusinessRoute
+  InternationalDiasporaLegalServicesRoute: typeof InternationalDiasporaLegalServicesRoute
+  InternationalForeignInvestmentSupportRoute: typeof InternationalForeignInvestmentSupportRoute
+  InternationalGlobalComplianceServicesRoute: typeof InternationalGlobalComplianceServicesRoute
+  InternationalInternationalDisputeResolutionRoute: typeof InternationalInternationalDisputeResolutionRoute
+  InternationalInternationalTransactionsRoute: typeof InternationalInternationalTransactionsRoute
+}
+
+const InternationalRouteChildren: InternationalRouteChildren = {
+  InternationalCrossBorderBusinessRoute: InternationalCrossBorderBusinessRoute,
+  InternationalDiasporaLegalServicesRoute:
+    InternationalDiasporaLegalServicesRoute,
+  InternationalForeignInvestmentSupportRoute:
+    InternationalForeignInvestmentSupportRoute,
+  InternationalGlobalComplianceServicesRoute:
+    InternationalGlobalComplianceServicesRoute,
+  InternationalInternationalDisputeResolutionRoute:
+    InternationalInternationalDisputeResolutionRoute,
+  InternationalInternationalTransactionsRoute:
+    InternationalInternationalTransactionsRoute,
+}
+
+const InternationalRouteWithChildren = InternationalRoute._addFileChildren(
+  InternationalRouteChildren,
+)
+
+interface NigeriaRouteChildren {
+  NigeriaBankingProjectFinanceRoute: typeof NigeriaBankingProjectFinanceRoute
+  NigeriaCompanySecretarialServicesRoute: typeof NigeriaCompanySecretarialServicesRoute
+  NigeriaCorporateCommercialLawRoute: typeof NigeriaCorporateCommercialLawRoute
+  NigeriaCrossRegionalRepresentationRoute: typeof NigeriaCrossRegionalRepresentationRoute
+  NigeriaDisputeResolutionRoute: typeof NigeriaDisputeResolutionRoute
+  NigeriaEntityCompanyFormationRoute: typeof NigeriaEntityCompanyFormationRoute
+  NigeriaFamilyLawRoute: typeof NigeriaFamilyLawRoute
+  NigeriaImmigrationLawRoute: typeof NigeriaImmigrationLawRoute
+  NigeriaLegalDocumentationRoute: typeof NigeriaLegalDocumentationRoute
+  NigeriaMaritimeLawRoute: typeof NigeriaMaritimeLawRoute
+  NigeriaNegotiationSupportRoute: typeof NigeriaNegotiationSupportRoute
+  NigeriaOilGasLawRoute: typeof NigeriaOilGasLawRoute
+  NigeriaRealEstatePropertyLawRoute: typeof NigeriaRealEstatePropertyLawRoute
+  NigeriaWillsEstatesRoute: typeof NigeriaWillsEstatesRoute
+}
+
+const NigeriaRouteChildren: NigeriaRouteChildren = {
+  NigeriaBankingProjectFinanceRoute: NigeriaBankingProjectFinanceRoute,
+  NigeriaCompanySecretarialServicesRoute:
+    NigeriaCompanySecretarialServicesRoute,
+  NigeriaCorporateCommercialLawRoute: NigeriaCorporateCommercialLawRoute,
+  NigeriaCrossRegionalRepresentationRoute:
+    NigeriaCrossRegionalRepresentationRoute,
+  NigeriaDisputeResolutionRoute: NigeriaDisputeResolutionRoute,
+  NigeriaEntityCompanyFormationRoute: NigeriaEntityCompanyFormationRoute,
+  NigeriaFamilyLawRoute: NigeriaFamilyLawRoute,
+  NigeriaImmigrationLawRoute: NigeriaImmigrationLawRoute,
+  NigeriaLegalDocumentationRoute: NigeriaLegalDocumentationRoute,
+  NigeriaMaritimeLawRoute: NigeriaMaritimeLawRoute,
+  NigeriaNegotiationSupportRoute: NigeriaNegotiationSupportRoute,
+  NigeriaOilGasLawRoute: NigeriaOilGasLawRoute,
+  NigeriaRealEstatePropertyLawRoute: NigeriaRealEstatePropertyLawRoute,
+  NigeriaWillsEstatesRoute: NigeriaWillsEstatesRoute,
+}
+
+const NigeriaRouteWithChildren =
+  NigeriaRoute._addFileChildren(NigeriaRouteChildren)
+
+interface ResourcesBlogRouteChildren {
+  ResourcesBlogSlugRoute: typeof ResourcesBlogSlugRoute
+}
+
+const ResourcesBlogRouteChildren: ResourcesBlogRouteChildren = {
+  ResourcesBlogSlugRoute: ResourcesBlogSlugRoute,
+}
+
+const ResourcesBlogRouteWithChildren = ResourcesBlogRoute._addFileChildren(
+  ResourcesBlogRouteChildren,
+)
+
+interface ResourcesRouteChildren {
+  ResourcesBlogRoute: typeof ResourcesBlogRouteWithChildren
+  ResourcesCaseInsightsRoute: typeof ResourcesCaseInsightsRoute
+  ResourcesFaqRoute: typeof ResourcesFaqRoute
+  ResourcesLegalGuidesRoute: typeof ResourcesLegalGuidesRoute
+  ResourcesNewsRoute: typeof ResourcesNewsRoute
+}
+
+const ResourcesRouteChildren: ResourcesRouteChildren = {
+  ResourcesBlogRoute: ResourcesBlogRouteWithChildren,
+  ResourcesCaseInsightsRoute: ResourcesCaseInsightsRoute,
+  ResourcesFaqRoute: ResourcesFaqRoute,
+  ResourcesLegalGuidesRoute: ResourcesLegalGuidesRoute,
+  ResourcesNewsRoute: ResourcesNewsRoute,
+}
+
+const ResourcesRouteWithChildren = ResourcesRoute._addFileChildren(
+  ResourcesRouteChildren,
+)
+
+interface UsaRouteChildren {
+  UsaCompanyFormationRoute: typeof UsaCompanyFormationRoute
+  UsaCompanySecretarialServicesRoute: typeof UsaCompanySecretarialServicesRoute
+  UsaComplianceSupportRoute: typeof UsaComplianceSupportRoute
+  UsaCrossBorderRepresentationRoute: typeof UsaCrossBorderRepresentationRoute
+  UsaDisputeResolutionRoute: typeof UsaDisputeResolutionRoute
+  UsaInternationalBusinessLawRoute: typeof UsaInternationalBusinessLawRoute
+  UsaLawyersInMelissaTexasRoute: typeof UsaLawyersInMelissaTexasRoute
+  UsaLegalAdvisoryRoute: typeof UsaLegalAdvisoryRoute
+  UsaNigerianLawyersInTexasRoute: typeof UsaNigerianLawyersInTexasRoute
+  UsaNigerianOwnedLawFirmTexasRoute: typeof UsaNigerianOwnedLawFirmTexasRoute
+  UsaTransactionsNegotiationsRoute: typeof UsaTransactionsNegotiationsRoute
+}
+
+const UsaRouteChildren: UsaRouteChildren = {
+  UsaCompanyFormationRoute: UsaCompanyFormationRoute,
+  UsaCompanySecretarialServicesRoute: UsaCompanySecretarialServicesRoute,
+  UsaComplianceSupportRoute: UsaComplianceSupportRoute,
+  UsaCrossBorderRepresentationRoute: UsaCrossBorderRepresentationRoute,
+  UsaDisputeResolutionRoute: UsaDisputeResolutionRoute,
+  UsaInternationalBusinessLawRoute: UsaInternationalBusinessLawRoute,
+  UsaLawyersInMelissaTexasRoute: UsaLawyersInMelissaTexasRoute,
+  UsaLegalAdvisoryRoute: UsaLegalAdvisoryRoute,
+  UsaNigerianLawyersInTexasRoute: UsaNigerianLawyersInTexasRoute,
+  UsaNigerianOwnedLawFirmTexasRoute: UsaNigerianOwnedLawFirmTexasRoute,
+  UsaTransactionsNegotiationsRoute: UsaTransactionsNegotiationsRoute,
+}
+
+const UsaRouteWithChildren = UsaRoute._addFileChildren(UsaRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  BookConsultationRoute: BookConsultationRoute,
+  ContactRoute: ContactRoute,
+  IndustriesRoute: IndustriesRouteWithChildren,
+  InternationalRoute: InternationalRouteWithChildren,
+  NigeriaRoute: NigeriaRouteWithChildren,
+  OurApproachRoute: OurApproachRoute,
+  PrivacyPolicyRoute: PrivacyPolicyRoute,
+  ResourcesRoute: ResourcesRouteWithChildren,
+  TeamRoute: TeamRoute,
+  UsaRoute: UsaRouteWithChildren,
+  WhyChooseUsRoute: WhyChooseUsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
