@@ -105,7 +105,7 @@ export function Header() {
               <a href="/nigeria" onClick={() => setOpen(false)} className="py-2.5 border-b border-border/60 text-foreground/90">Nigeria Services</a>
               <a href="/international" onClick={() => setOpen(false)} className="py-2.5 border-b border-border/60 text-foreground/90">International</a>
               <a href="/industries" onClick={() => setOpen(false)} className="py-2.5 border-b border-border/60 text-foreground/90">Industries</a>
-              <MobileGroup label="Resources" items={resourceLinks} onClick={() => setOpen(false)} />
+              
               <a href="/contact" onClick={() => setOpen(false)} className="py-2.5 border-b border-border/60 text-foreground/90">Contact</a>
               <Link
                 to="/book-consultation"
