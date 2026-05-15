@@ -82,14 +82,14 @@ function FooterCol({
           <li key={l.to}>
             <a href={l.to} className="text-sm text-bone/75 hover:text-gold transition">
               {l.label}
-            </Link>
+            </a>
           </li>
         ))}
         {more && (
           <li className="pt-1">
             <a href={more.to} className="text-xs text-gold hover:text-bone transition">
               {more.label}
-            </Link>
+            </a>
           </li>
         )}
       </ul>

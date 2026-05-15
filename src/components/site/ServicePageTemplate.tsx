@@ -151,14 +151,14 @@ export function ServicePageTemplate({
               <div className="eyebrow mb-3">Related services</div>
               <div className="space-y-2">
                 {related.map((r) => (
-                  <Link
+                  <a
                     key={r.slug}
-                    to={`/${r.region.toLowerCase()}/${r.slug}`}
+                    href={`/${r.region.toLowerCase()}/${r.slug}`}
                     className="block p-4 rounded-md border border-border hover:border-gold hover:bg-accent transition"
                   >
                     <div className="font-medium text-navy text-sm">{r.title}</div>
                     <div className="text-xs text-muted-foreground mt-1 line-clamp-2">{r.blurb}</div>
-                  </Link>
+                  </a>
                 ))}
               </div>
             </div>
