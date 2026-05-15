@@ -15,12 +15,6 @@ const aboutLinks: NavItem[] = [
   { to: "/team", label: "Our Team" },
 ];
 
-const resourceLinks: NavItem[] = [
-  { to: "/resources/faq", label: "FAQs" },
-  { to: "/resources/legal-guides", label: "Legal Guides" },
-  { to: "/resources/case-insights", label: "Case Insights" },
-];
-
 export function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
