@@ -15,12 +15,6 @@ const aboutLinks: NavItem[] = [
   { to: "/team", label: "Our Team" },
 ];
 
-const resourceLinks: NavItem[] = [
-  { to: "/resources/faq", label: "FAQs" },
-  { to: "/resources/legal-guides", label: "Legal Guides" },
-  { to: "/resources/case-insights", label: "Case Insights" },
-];
-
 export function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -80,7 +74,7 @@ export function Header() {
               ]}
             />
             <a href="/international" className="px-3 py-2 text-foreground/80 hover:text-navy transition">International</a>
-            <Dropdown label="Resources" items={resourceLinks} />
+            
             <a href="/contact" className="px-3 py-2 text-foreground/80 hover:text-navy transition">Contact</a>
           </nav>
 
@@ -111,7 +105,7 @@ export function Header() {
               <a href="/nigeria" onClick={() => setOpen(false)} className="py-2.5 border-b border-border/60 text-foreground/90">Nigeria Services</a>
               <a href="/international" onClick={() => setOpen(false)} className="py-2.5 border-b border-border/60 text-foreground/90">International</a>
               <a href="/industries" onClick={() => setOpen(false)} className="py-2.5 border-b border-border/60 text-foreground/90">Industries</a>
-              <MobileGroup label="Resources" items={resourceLinks} onClick={() => setOpen(false)} />
+              
               <a href="/contact" onClick={() => setOpen(false)} className="py-2.5 border-b border-border/60 text-foreground/90">Contact</a>
               <Link
                 to="/book-consultation"

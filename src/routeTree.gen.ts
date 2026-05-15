@@ -12,7 +12,6 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as WhyChooseUsRouteImport } from './routes/why-choose-us'
 import { Route as UsaRouteImport } from './routes/usa'
 import { Route as TeamRouteImport } from './routes/team'
-import { Route as ResourcesRouteImport } from './routes/resources'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as OurApproachRouteImport } from './routes/our-approach'
 import { Route as NigeriaRouteImport } from './routes/nigeria'
@@ -33,11 +32,6 @@ import { Route as UsaCrossBorderRepresentationRouteImport } from './routes/usa.c
 import { Route as UsaComplianceSupportRouteImport } from './routes/usa.compliance-support'
 import { Route as UsaCompanySecretarialServicesRouteImport } from './routes/usa.company-secretarial-services'
 import { Route as UsaCompanyFormationRouteImport } from './routes/usa.company-formation'
-import { Route as ResourcesNewsRouteImport } from './routes/resources.news'
-import { Route as ResourcesLegalGuidesRouteImport } from './routes/resources.legal-guides'
-import { Route as ResourcesFaqRouteImport } from './routes/resources.faq'
-import { Route as ResourcesCaseInsightsRouteImport } from './routes/resources.case-insights'
-import { Route as ResourcesBlogRouteImport } from './routes/resources.blog'
 import { Route as NigeriaWillsEstatesRouteImport } from './routes/nigeria.wills-estates'
 import { Route as NigeriaRealEstatePropertyLawRouteImport } from './routes/nigeria.real-estate-property-law'
 import { Route as NigeriaOilGasLawRouteImport } from './routes/nigeria.oil-gas-law'
@@ -64,7 +58,6 @@ import { Route as IndustriesOilAndGasRouteImport } from './routes/industries.oil
 import { Route as IndustriesMaritimeRouteImport } from './routes/industries.maritime'
 import { Route as IndustriesImmigrationRouteImport } from './routes/industries.immigration'
 import { Route as IndustriesBankingFinanceRouteImport } from './routes/industries.banking-finance'
-import { Route as ResourcesBlogSlugRouteImport } from './routes/resources.blog.$slug'
 
 const WhyChooseUsRoute = WhyChooseUsRouteImport.update({
   id: '/why-choose-us',
@@ -79,11 +72,6 @@ const UsaRoute = UsaRouteImport.update({
 const TeamRoute = TeamRouteImport.update({
   id: '/team',
   path: '/team',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ResourcesRoute = ResourcesRouteImport.update({
-  id: '/resources',
-  path: '/resources',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
@@ -192,31 +180,6 @@ const UsaCompanyFormationRoute = UsaCompanyFormationRouteImport.update({
   id: '/company-formation',
   path: '/company-formation',
   getParentRoute: () => UsaRoute,
-} as any)
-const ResourcesNewsRoute = ResourcesNewsRouteImport.update({
-  id: '/news',
-  path: '/news',
-  getParentRoute: () => ResourcesRoute,
-} as any)
-const ResourcesLegalGuidesRoute = ResourcesLegalGuidesRouteImport.update({
-  id: '/legal-guides',
-  path: '/legal-guides',
-  getParentRoute: () => ResourcesRoute,
-} as any)
-const ResourcesFaqRoute = ResourcesFaqRouteImport.update({
-  id: '/faq',
-  path: '/faq',
-  getParentRoute: () => ResourcesRoute,
-} as any)
-const ResourcesCaseInsightsRoute = ResourcesCaseInsightsRouteImport.update({
-  id: '/case-insights',
-  path: '/case-insights',
-  getParentRoute: () => ResourcesRoute,
-} as any)
-const ResourcesBlogRoute = ResourcesBlogRouteImport.update({
-  id: '/blog',
-  path: '/blog',
-  getParentRoute: () => ResourcesRoute,
 } as any)
 const NigeriaWillsEstatesRoute = NigeriaWillsEstatesRouteImport.update({
   id: '/wills-estates',
@@ -365,11 +328,6 @@ const IndustriesBankingFinanceRoute =
     path: '/banking-finance',
     getParentRoute: () => IndustriesRoute,
   } as any)
-const ResourcesBlogSlugRoute = ResourcesBlogSlugRouteImport.update({
-  id: '/$slug',
-  path: '/$slug',
-  getParentRoute: () => ResourcesBlogRoute,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -381,7 +339,6 @@ export interface FileRoutesByFullPath {
   '/nigeria': typeof NigeriaRouteWithChildren
   '/our-approach': typeof OurApproachRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
-  '/resources': typeof ResourcesRouteWithChildren
   '/team': typeof TeamRoute
   '/usa': typeof UsaRouteWithChildren
   '/why-choose-us': typeof WhyChooseUsRoute
@@ -411,11 +368,6 @@ export interface FileRoutesByFullPath {
   '/nigeria/oil-gas-law': typeof NigeriaOilGasLawRoute
   '/nigeria/real-estate-property-law': typeof NigeriaRealEstatePropertyLawRoute
   '/nigeria/wills-estates': typeof NigeriaWillsEstatesRoute
-  '/resources/blog': typeof ResourcesBlogRouteWithChildren
-  '/resources/case-insights': typeof ResourcesCaseInsightsRoute
-  '/resources/faq': typeof ResourcesFaqRoute
-  '/resources/legal-guides': typeof ResourcesLegalGuidesRoute
-  '/resources/news': typeof ResourcesNewsRoute
   '/usa/company-formation': typeof UsaCompanyFormationRoute
   '/usa/company-secretarial-services': typeof UsaCompanySecretarialServicesRoute
   '/usa/compliance-support': typeof UsaComplianceSupportRoute
@@ -427,7 +379,6 @@ export interface FileRoutesByFullPath {
   '/usa/nigerian-lawyers-in-texas': typeof UsaNigerianLawyersInTexasRoute
   '/usa/nigerian-owned-law-firm-texas': typeof UsaNigerianOwnedLawFirmTexasRoute
   '/usa/transactions-negotiations': typeof UsaTransactionsNegotiationsRoute
-  '/resources/blog/$slug': typeof ResourcesBlogSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -439,7 +390,6 @@ export interface FileRoutesByTo {
   '/nigeria': typeof NigeriaRouteWithChildren
   '/our-approach': typeof OurApproachRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
-  '/resources': typeof ResourcesRouteWithChildren
   '/team': typeof TeamRoute
   '/usa': typeof UsaRouteWithChildren
   '/why-choose-us': typeof WhyChooseUsRoute
@@ -469,11 +419,6 @@ export interface FileRoutesByTo {
   '/nigeria/oil-gas-law': typeof NigeriaOilGasLawRoute
   '/nigeria/real-estate-property-law': typeof NigeriaRealEstatePropertyLawRoute
   '/nigeria/wills-estates': typeof NigeriaWillsEstatesRoute
-  '/resources/blog': typeof ResourcesBlogRouteWithChildren
-  '/resources/case-insights': typeof ResourcesCaseInsightsRoute
-  '/resources/faq': typeof ResourcesFaqRoute
-  '/resources/legal-guides': typeof ResourcesLegalGuidesRoute
-  '/resources/news': typeof ResourcesNewsRoute
   '/usa/company-formation': typeof UsaCompanyFormationRoute
   '/usa/company-secretarial-services': typeof UsaCompanySecretarialServicesRoute
   '/usa/compliance-support': typeof UsaComplianceSupportRoute
@@ -485,7 +430,6 @@ export interface FileRoutesByTo {
   '/usa/nigerian-lawyers-in-texas': typeof UsaNigerianLawyersInTexasRoute
   '/usa/nigerian-owned-law-firm-texas': typeof UsaNigerianOwnedLawFirmTexasRoute
   '/usa/transactions-negotiations': typeof UsaTransactionsNegotiationsRoute
-  '/resources/blog/$slug': typeof ResourcesBlogSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -498,7 +442,6 @@ export interface FileRoutesById {
   '/nigeria': typeof NigeriaRouteWithChildren
   '/our-approach': typeof OurApproachRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
-  '/resources': typeof ResourcesRouteWithChildren
   '/team': typeof TeamRoute
   '/usa': typeof UsaRouteWithChildren
   '/why-choose-us': typeof WhyChooseUsRoute
@@ -528,11 +471,6 @@ export interface FileRoutesById {
   '/nigeria/oil-gas-law': typeof NigeriaOilGasLawRoute
   '/nigeria/real-estate-property-law': typeof NigeriaRealEstatePropertyLawRoute
   '/nigeria/wills-estates': typeof NigeriaWillsEstatesRoute
-  '/resources/blog': typeof ResourcesBlogRouteWithChildren
-  '/resources/case-insights': typeof ResourcesCaseInsightsRoute
-  '/resources/faq': typeof ResourcesFaqRoute
-  '/resources/legal-guides': typeof ResourcesLegalGuidesRoute
-  '/resources/news': typeof ResourcesNewsRoute
   '/usa/company-formation': typeof UsaCompanyFormationRoute
   '/usa/company-secretarial-services': typeof UsaCompanySecretarialServicesRoute
   '/usa/compliance-support': typeof UsaComplianceSupportRoute
@@ -544,7 +482,6 @@ export interface FileRoutesById {
   '/usa/nigerian-lawyers-in-texas': typeof UsaNigerianLawyersInTexasRoute
   '/usa/nigerian-owned-law-firm-texas': typeof UsaNigerianOwnedLawFirmTexasRoute
   '/usa/transactions-negotiations': typeof UsaTransactionsNegotiationsRoute
-  '/resources/blog/$slug': typeof ResourcesBlogSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -558,7 +495,6 @@ export interface FileRouteTypes {
     | '/nigeria'
     | '/our-approach'
     | '/privacy-policy'
-    | '/resources'
     | '/team'
     | '/usa'
     | '/why-choose-us'
@@ -588,11 +524,6 @@ export interface FileRouteTypes {
     | '/nigeria/oil-gas-law'
     | '/nigeria/real-estate-property-law'
     | '/nigeria/wills-estates'
-    | '/resources/blog'
-    | '/resources/case-insights'
-    | '/resources/faq'
-    | '/resources/legal-guides'
-    | '/resources/news'
     | '/usa/company-formation'
     | '/usa/company-secretarial-services'
     | '/usa/compliance-support'
@@ -604,7 +535,6 @@ export interface FileRouteTypes {
     | '/usa/nigerian-lawyers-in-texas'
     | '/usa/nigerian-owned-law-firm-texas'
     | '/usa/transactions-negotiations'
-    | '/resources/blog/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -616,7 +546,6 @@ export interface FileRouteTypes {
     | '/nigeria'
     | '/our-approach'
     | '/privacy-policy'
-    | '/resources'
     | '/team'
     | '/usa'
     | '/why-choose-us'
@@ -646,11 +575,6 @@ export interface FileRouteTypes {
     | '/nigeria/oil-gas-law'
     | '/nigeria/real-estate-property-law'
     | '/nigeria/wills-estates'
-    | '/resources/blog'
-    | '/resources/case-insights'
-    | '/resources/faq'
-    | '/resources/legal-guides'
-    | '/resources/news'
     | '/usa/company-formation'
     | '/usa/company-secretarial-services'
     | '/usa/compliance-support'
@@ -662,7 +586,6 @@ export interface FileRouteTypes {
     | '/usa/nigerian-lawyers-in-texas'
     | '/usa/nigerian-owned-law-firm-texas'
     | '/usa/transactions-negotiations'
-    | '/resources/blog/$slug'
   id:
     | '__root__'
     | '/'
@@ -674,7 +597,6 @@ export interface FileRouteTypes {
     | '/nigeria'
     | '/our-approach'
     | '/privacy-policy'
-    | '/resources'
     | '/team'
     | '/usa'
     | '/why-choose-us'
@@ -704,11 +626,6 @@ export interface FileRouteTypes {
     | '/nigeria/oil-gas-law'
     | '/nigeria/real-estate-property-law'
     | '/nigeria/wills-estates'
-    | '/resources/blog'
-    | '/resources/case-insights'
-    | '/resources/faq'
-    | '/resources/legal-guides'
-    | '/resources/news'
     | '/usa/company-formation'
     | '/usa/company-secretarial-services'
     | '/usa/compliance-support'
@@ -720,7 +637,6 @@ export interface FileRouteTypes {
     | '/usa/nigerian-lawyers-in-texas'
     | '/usa/nigerian-owned-law-firm-texas'
     | '/usa/transactions-negotiations'
-    | '/resources/blog/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -733,7 +649,6 @@ export interface RootRouteChildren {
   NigeriaRoute: typeof NigeriaRouteWithChildren
   OurApproachRoute: typeof OurApproachRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
-  ResourcesRoute: typeof ResourcesRouteWithChildren
   TeamRoute: typeof TeamRoute
   UsaRoute: typeof UsaRouteWithChildren
   WhyChooseUsRoute: typeof WhyChooseUsRoute
@@ -760,13 +675,6 @@ declare module '@tanstack/react-router' {
       path: '/team'
       fullPath: '/team'
       preLoaderRoute: typeof TeamRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/resources': {
-      id: '/resources'
-      path: '/resources'
-      fullPath: '/resources'
-      preLoaderRoute: typeof ResourcesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/privacy-policy': {
@@ -908,41 +816,6 @@ declare module '@tanstack/react-router' {
       fullPath: '/usa/company-formation'
       preLoaderRoute: typeof UsaCompanyFormationRouteImport
       parentRoute: typeof UsaRoute
-    }
-    '/resources/news': {
-      id: '/resources/news'
-      path: '/news'
-      fullPath: '/resources/news'
-      preLoaderRoute: typeof ResourcesNewsRouteImport
-      parentRoute: typeof ResourcesRoute
-    }
-    '/resources/legal-guides': {
-      id: '/resources/legal-guides'
-      path: '/legal-guides'
-      fullPath: '/resources/legal-guides'
-      preLoaderRoute: typeof ResourcesLegalGuidesRouteImport
-      parentRoute: typeof ResourcesRoute
-    }
-    '/resources/faq': {
-      id: '/resources/faq'
-      path: '/faq'
-      fullPath: '/resources/faq'
-      preLoaderRoute: typeof ResourcesFaqRouteImport
-      parentRoute: typeof ResourcesRoute
-    }
-    '/resources/case-insights': {
-      id: '/resources/case-insights'
-      path: '/case-insights'
-      fullPath: '/resources/case-insights'
-      preLoaderRoute: typeof ResourcesCaseInsightsRouteImport
-      parentRoute: typeof ResourcesRoute
-    }
-    '/resources/blog': {
-      id: '/resources/blog'
-      path: '/blog'
-      fullPath: '/resources/blog'
-      preLoaderRoute: typeof ResourcesBlogRouteImport
-      parentRoute: typeof ResourcesRoute
     }
     '/nigeria/wills-estates': {
       id: '/nigeria/wills-estates'
@@ -1126,13 +999,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndustriesBankingFinanceRouteImport
       parentRoute: typeof IndustriesRoute
     }
-    '/resources/blog/$slug': {
-      id: '/resources/blog/$slug'
-      path: '/$slug'
-      fullPath: '/resources/blog/$slug'
-      preLoaderRoute: typeof ResourcesBlogSlugRouteImport
-      parentRoute: typeof ResourcesBlogRoute
-    }
   }
 }
 
@@ -1224,38 +1090,6 @@ const NigeriaRouteChildren: NigeriaRouteChildren = {
 const NigeriaRouteWithChildren =
   NigeriaRoute._addFileChildren(NigeriaRouteChildren)
 
-interface ResourcesBlogRouteChildren {
-  ResourcesBlogSlugRoute: typeof ResourcesBlogSlugRoute
-}
-
-const ResourcesBlogRouteChildren: ResourcesBlogRouteChildren = {
-  ResourcesBlogSlugRoute: ResourcesBlogSlugRoute,
-}
-
-const ResourcesBlogRouteWithChildren = ResourcesBlogRoute._addFileChildren(
-  ResourcesBlogRouteChildren,
-)
-
-interface ResourcesRouteChildren {
-  ResourcesBlogRoute: typeof ResourcesBlogRouteWithChildren
-  ResourcesCaseInsightsRoute: typeof ResourcesCaseInsightsRoute
-  ResourcesFaqRoute: typeof ResourcesFaqRoute
-  ResourcesLegalGuidesRoute: typeof ResourcesLegalGuidesRoute
-  ResourcesNewsRoute: typeof ResourcesNewsRoute
-}
-
-const ResourcesRouteChildren: ResourcesRouteChildren = {
-  ResourcesBlogRoute: ResourcesBlogRouteWithChildren,
-  ResourcesCaseInsightsRoute: ResourcesCaseInsightsRoute,
-  ResourcesFaqRoute: ResourcesFaqRoute,
-  ResourcesLegalGuidesRoute: ResourcesLegalGuidesRoute,
-  ResourcesNewsRoute: ResourcesNewsRoute,
-}
-
-const ResourcesRouteWithChildren = ResourcesRoute._addFileChildren(
-  ResourcesRouteChildren,
-)
-
 interface UsaRouteChildren {
   UsaCompanyFormationRoute: typeof UsaCompanyFormationRoute
   UsaCompanySecretarialServicesRoute: typeof UsaCompanySecretarialServicesRoute
@@ -1296,7 +1130,6 @@ const rootRouteChildren: RootRouteChildren = {
   NigeriaRoute: NigeriaRouteWithChildren,
   OurApproachRoute: OurApproachRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
-  ResourcesRoute: ResourcesRouteWithChildren,
   TeamRoute: TeamRoute,
   UsaRoute: UsaRouteWithChildren,
   WhyChooseUsRoute: WhyChooseUsRoute,
