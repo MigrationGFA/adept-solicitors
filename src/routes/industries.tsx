@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowRight } from "lucide-react";
+
 import { PageHero } from "@/components/site/PageHero";
 import { CTABanner } from "@/components/site/CTABanner";
 import { industries } from "@/lib/industries";
@@ -36,9 +36,6 @@ function IndustriesPage() {
                 {i.highlights.map((h) => (
                   <span key={h} className="text-[11px] px-2 py-0.5 rounded-full bg-accent text-accent-foreground">{h}</span>
                 ))}
-              </div>
-              <div className="mt-5 inline-flex items-center gap-1.5 text-sm text-navy group-hover:text-gold transition font-medium">
-                Explore <ArrowRight className="size-3.5" />
               </div>
             </a>
           ))}
