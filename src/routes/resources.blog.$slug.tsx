@@ -37,7 +37,7 @@ function PostPage() {
       />
       <article className="container-prose py-20 max-w-3xl">
         <div className="prose prose-lg max-w-none">
-          {post.body.map((p, i) => (
+          {post.body.map((p: string, i: number) => (
             <p key={i} className="text-foreground/85 leading-relaxed text-lg mb-6">{p}</p>
           ))}
         </div>
