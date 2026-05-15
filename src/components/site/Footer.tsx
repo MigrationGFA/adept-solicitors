@@ -46,7 +46,7 @@ export function Footer() {
             { to: "/why-choose-us", label: "Why Choose Us" },
             { to: "/international", label: "International" },
             { to: "/industries", label: "Industries" },
-            { to: "/resources/blog", label: "Blog" },
+            { to: "/resources", label: "Resources" },
             { to: "/contact", label: "Contact" },
             { to: "/book-consultation", label: "Book Consultation" },
           ]}
