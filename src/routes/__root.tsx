@@ -73,7 +73,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Adept Consultants — International Law Firm | Texas & Nigeria" },
+      { title: "Adept Consultants" },
       {
         name: "description",
         content:
@@ -83,6 +83,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:site_name", content: "Adept Consultants" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "Adept Consultants" },
+      { name: "twitter:title", content: "Adept Consultants" },
+      { name: "description", content: "Adept Consultants — International Law Firm | Texas & Nigeria" },
+      { property: "og:description", content: "Adept Consultants — International Law Firm | Texas & Nigeria" },
+      { name: "twitter:description", content: "Adept Consultants — International Law Firm | Texas & Nigeria" },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/9bc2df54-4af8-4cfa-b70f-906928e18e94/id-preview-5a92cb47--40f25521-333b-4a30-ab29-53a68e74a62c.lovable.app-1778849309960.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/9bc2df54-4af8-4cfa-b70f-906928e18e94/id-preview-5a92cb47--40f25521-333b-4a30-ab29-53a68e74a62c.lovable.app-1778849309960.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
