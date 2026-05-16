@@ -7,7 +7,10 @@ export const Route = createFileRoute("/book-consultation")({
   head: () => ({
     meta: [
       { title: "Book a Consultation — Adept Consultants" },
-      { name: "description", content: "Schedule a confidential consultation with our cross-border legal team." },
+      {
+        name: "description",
+        content: "Schedule a confidential consultation with our cross-border legal team.",
+      },
       { property: "og:title", content: "Book a Consultation" },
       { property: "og:url", content: "/book-consultation" },
     ],
@@ -34,7 +37,9 @@ function BookPage() {
       <section className="container-prose py-20 grid lg:grid-cols-[1fr_1.4fr] gap-14">
         <div>
           <div className="eyebrow mb-3">What to expect</div>
-          <h2 className="font-display text-3xl font-semibold text-navy mb-6">A senior attorney, on the call.</h2>
+          <h2 className="font-display text-3xl font-semibold text-navy mb-6">
+            A senior attorney, on the call.
+          </h2>
           <ul className="space-y-3">
             {benefits.map((b) => (
               <li key={b} className="flex items-start gap-3">

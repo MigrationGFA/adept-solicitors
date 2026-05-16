@@ -18,14 +18,32 @@ export function ServicePageTemplate({
   regionTo: string;
 }) {
   const related = allServices
-    .filter((s) => s.region.toLowerCase() === region.replace("usa", "usa") && s.slug !== service.slug)
+    .filter(
+      (s) => s.region.toLowerCase() === region.replace("usa", "usa") && s.slug !== service.slug,
+    )
     .slice(0, 3);
 
   const process = [
-    { step: "01", title: "Discovery", desc: "Confidential intake to understand your matter, jurisdictions, and desired outcomes." },
-    { step: "02", title: "Strategy", desc: "We propose a tailored legal strategy with clear scope, milestones, and budget." },
-    { step: "03", title: "Execution", desc: "Senior attorneys lead the work, with regular updates and document deliverables." },
-    { step: "04", title: "Resolution", desc: "We close the matter, hand over records, and remain available for ongoing counsel." },
+    {
+      step: "01",
+      title: "Discovery",
+      desc: "Confidential intake to understand your matter, jurisdictions, and desired outcomes.",
+    },
+    {
+      step: "02",
+      title: "Strategy",
+      desc: "We propose a tailored legal strategy with clear scope, milestones, and budget.",
+    },
+    {
+      step: "03",
+      title: "Execution",
+      desc: "Senior attorneys lead the work, with regular updates and document deliverables.",
+    },
+    {
+      step: "04",
+      title: "Resolution",
+      desc: "We close the matter, hand over records, and remain available for ongoing counsel.",
+    },
   ];
 
   const faqs = [
@@ -56,10 +74,16 @@ export function ServicePageTemplate({
         ]}
       >
         <div className="flex flex-wrap gap-3">
-          <Link to="/book-consultation" className="rounded-sm bg-gold text-gold-foreground px-6 py-3 font-medium hover:brightness-95 transition shadow-gold">
+          <Link
+            to="/book-consultation"
+            className="rounded-sm bg-gold text-gold-foreground px-6 py-3 font-medium hover:brightness-95 transition shadow-gold"
+          >
             Book Consultation
           </Link>
-          <Link to="/contact" className="rounded-sm border border-bone/30 px-6 py-3 font-medium hover:bg-bone/10 transition">
+          <Link
+            to="/contact"
+            className="rounded-sm border border-bone/30 px-6 py-3 font-medium hover:bg-bone/10 transition"
+          >
             Contact Our Team
           </Link>
         </div>
@@ -69,20 +93,28 @@ export function ServicePageTemplate({
         <div className="lg:col-span-2 space-y-12">
           <div>
             <div className="eyebrow mb-3">Overview</div>
-            <h2 className="font-display text-3xl font-semibold text-navy mb-5">A senior-led practice you can rely on.</h2>
+            <h2 className="font-display text-3xl font-semibold text-navy mb-5">
+              A senior-led practice you can rely on.
+            </h2>
             <p className="text-foreground/80 leading-relaxed text-lg">{service.blurb}</p>
             <p className="text-foreground/70 leading-relaxed mt-4">
-              Our {service.title.toLowerCase()} practice combines technical depth with practical commercial judgment.
-              We work alongside our clients — not around them — to deliver outcomes that hold up commercially, legally, and reputationally.
+              Our {service.title.toLowerCase()} practice combines technical depth with practical
+              commercial judgment. We work alongside our clients — not around them — to deliver
+              outcomes that hold up commercially, legally, and reputationally.
             </p>
           </div>
 
           <div>
             <div className="eyebrow mb-3">What we handle</div>
-            <h2 className="font-display text-3xl font-semibold text-navy mb-6">Scope of services</h2>
+            <h2 className="font-display text-3xl font-semibold text-navy mb-6">
+              Scope of services
+            </h2>
             <ul className="grid sm:grid-cols-2 gap-3">
               {service.handles.map((h) => (
-                <li key={h} className="flex items-start gap-3 p-4 rounded-md border border-border bg-card">
+                <li
+                  key={h}
+                  className="flex items-start gap-3 p-4 rounded-md border border-border bg-card"
+                >
                   <CheckCircle2 className="size-5 text-gold flex-shrink-0 mt-0.5" />
                   <span className="text-sm text-foreground/85">{h}</span>
                 </li>
@@ -106,7 +138,9 @@ export function ServicePageTemplate({
 
           <div>
             <div className="eyebrow mb-3">Benefits</div>
-            <h2 className="font-display text-3xl font-semibold text-navy mb-6">Why clients engage us</h2>
+            <h2 className="font-display text-3xl font-semibold text-navy mb-6">
+              Why clients engage us
+            </h2>
             <ul className="space-y-3">
               {service.benefits.map((b) => (
                 <li key={b} className="flex items-start gap-3">

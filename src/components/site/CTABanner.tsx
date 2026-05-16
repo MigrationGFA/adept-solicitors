@@ -17,10 +17,16 @@ export function CTABanner({
           <p className="mt-3 text-bone/75 max-w-xl">{subtitle}</p>
         </div>
         <div className="flex flex-wrap gap-3">
-          <Link to="/book-consultation" className="rounded-sm bg-gold text-gold-foreground px-6 py-3 font-medium hover:brightness-95 transition shadow-gold">
+          <Link
+            to="/book-consultation"
+            className="rounded-sm bg-gold text-gold-foreground px-6 py-3 font-medium hover:brightness-95 transition shadow-gold"
+          >
             Book Consultation
           </Link>
-          <Link to="/contact" className="rounded-sm border border-bone/30 px-6 py-3 font-medium hover:bg-bone/10 transition">
+          <Link
+            to="/contact"
+            className="rounded-sm border border-bone/30 px-6 py-3 font-medium hover:bg-bone/10 transition"
+          >
             Contact Us
           </Link>
         </div>

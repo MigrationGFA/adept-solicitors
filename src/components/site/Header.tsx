@@ -30,19 +30,28 @@ export function Header() {
     <>
       <div className="hidden md:block bg-navy text-navy-foreground/90 text-xs">
         <div className="container-prose flex items-center justify-between py-2">
-          <p>{site.address.line1} · {site.address.line2}</p>
+          <p>
+            {site.address.line1} · {site.address.line2}
+          </p>
           <div className="flex items-center gap-5">
-            <a href={`tel:${site.phones[0].replace(/-/g, "")}`} className="flex items-center gap-2 hover:text-gold transition">
+            <a
+              href={`tel:${site.phones[0].replace(/-/g, "")}`}
+              className="flex items-center gap-2 hover:text-gold transition"
+            >
               <Phone className="size-3.5" /> {site.phones[0]}
             </a>
-            <a href={`mailto:${site.email}`} className="hover:text-gold transition">{site.email}</a>
+            <a href={`mailto:${site.email}`} className="hover:text-gold transition">
+              {site.email}
+            </a>
           </div>
         </div>
       </div>
 
       <header
         className={`sticky top-0 z-50 transition-all duration-300 ${
-          scrolled ? "bg-background/90 backdrop-blur-md border-b border-border shadow-card-soft" : "bg-background/70 backdrop-blur"
+          scrolled
+            ? "bg-background/90 backdrop-blur-md border-b border-border shadow-card-soft"
+            : "bg-background/70 backdrop-blur"
         }`}
       >
         <div className="container-prose flex items-center justify-between h-16 md:h-20">
@@ -63,7 +72,9 @@ export function Header() {
           </Link>
 
           <nav className="hidden lg:flex items-center gap-1 text-sm font-medium">
-            <a href="/" className="px-3 py-2 text-foreground/80 hover:text-navy transition">Home</a>
+            <a href="/" className="px-3 py-2 text-foreground/80 hover:text-navy transition">
+              Home
+            </a>
             <Dropdown label="About" items={aboutLinks} />
             <ServicesMega />
             <Dropdown
@@ -73,9 +84,16 @@ export function Header() {
                 ...industries.map((i) => ({ to: `/industries/${i.slug}`, label: i.name })),
               ]}
             />
-            <a href="/international" className="px-3 py-2 text-foreground/80 hover:text-navy transition">International</a>
-            
-            <a href="/contact" className="px-3 py-2 text-foreground/80 hover:text-navy transition">Contact</a>
+            <a
+              href="/international"
+              className="px-3 py-2 text-foreground/80 hover:text-navy transition"
+            >
+              International
+            </a>
+
+            <a href="/contact" className="px-3 py-2 text-foreground/80 hover:text-navy transition">
+              Contact
+            </a>
           </nav>
 
           <div className="hidden lg:flex items-center gap-3">
@@ -99,14 +117,50 @@ export function Header() {
         {open && (
           <div className="lg:hidden border-t border-border bg-background animate-fade-up">
             <div className="container-prose py-4 flex flex-col gap-1 text-sm">
-              <a href="/" onClick={() => setOpen(false)} className="py-2.5 border-b border-border/60 text-foreground/90">Home</a>
+              <a
+                href="/"
+                onClick={() => setOpen(false)}
+                className="py-2.5 border-b border-border/60 text-foreground/90"
+              >
+                Home
+              </a>
               <MobileGroup label="About" items={aboutLinks} onClick={() => setOpen(false)} />
-              <a href="/usa" onClick={() => setOpen(false)} className="py-2.5 border-b border-border/60 text-foreground/90">USA Services</a>
-              <a href="/nigeria" onClick={() => setOpen(false)} className="py-2.5 border-b border-border/60 text-foreground/90">Nigeria Services</a>
-              <a href="/international" onClick={() => setOpen(false)} className="py-2.5 border-b border-border/60 text-foreground/90">International</a>
-              <a href="/industries" onClick={() => setOpen(false)} className="py-2.5 border-b border-border/60 text-foreground/90">Industries</a>
-              
-              <a href="/contact" onClick={() => setOpen(false)} className="py-2.5 border-b border-border/60 text-foreground/90">Contact</a>
+              <a
+                href="/usa"
+                onClick={() => setOpen(false)}
+                className="py-2.5 border-b border-border/60 text-foreground/90"
+              >
+                USA Services
+              </a>
+              <a
+                href="/nigeria"
+                onClick={() => setOpen(false)}
+                className="py-2.5 border-b border-border/60 text-foreground/90"
+              >
+                Nigeria Services
+              </a>
+              <a
+                href="/international"
+                onClick={() => setOpen(false)}
+                className="py-2.5 border-b border-border/60 text-foreground/90"
+              >
+                International
+              </a>
+              <a
+                href="/industries"
+                onClick={() => setOpen(false)}
+                className="py-2.5 border-b border-border/60 text-foreground/90"
+              >
+                Industries
+              </a>
+
+              <a
+                href="/contact"
+                onClick={() => setOpen(false)}
+                className="py-2.5 border-b border-border/60 text-foreground/90"
+              >
+                Contact
+              </a>
               <Link
                 to="/book-consultation"
                 onClick={() => setOpen(false)}
@@ -153,9 +207,26 @@ function ServicesMega() {
       </button>
       <div className="absolute left-1/2 -translate-x-1/2 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 w-[820px]">
         <div className="bg-card border border-border rounded-md shadow-elegant p-6 grid grid-cols-3 gap-6">
-          <MegaColumn title="USA Services" to="/usa" items={usaServices.slice(0, 7).map((s) => ({ to: `/usa/${s.slug}`, label: s.title }))} />
-          <MegaColumn title="Nigeria Services" to="/nigeria" items={nigeriaServices.slice(0, 8).map((s) => ({ to: `/nigeria/${s.slug}`, label: s.title }))} />
-          <MegaColumn title="International" to="/international" items={internationalServices.map((s) => ({ to: `/international/${s.slug}`, label: s.title }))} />
+          <MegaColumn
+            title="USA Services"
+            to="/usa"
+            items={usaServices.slice(0, 7).map((s) => ({ to: `/usa/${s.slug}`, label: s.title }))}
+          />
+          <MegaColumn
+            title="Nigeria Services"
+            to="/nigeria"
+            items={nigeriaServices
+              .slice(0, 8)
+              .map((s) => ({ to: `/nigeria/${s.slug}`, label: s.title }))}
+          />
+          <MegaColumn
+            title="International"
+            to="/international"
+            items={internationalServices.map((s) => ({
+              to: `/international/${s.slug}`,
+              label: s.title,
+            }))}
+          />
         </div>
       </div>
     </div>
@@ -165,7 +236,9 @@ function ServicesMega() {
 function MegaColumn({ title, to, items }: { title: string; to: string; items: NavItem[] }) {
   return (
     <div>
-      <a href={to} className="eyebrow mb-3 block hover:text-navy transition">{title}</a>
+      <a href={to} className="eyebrow mb-3 block hover:text-navy transition">
+        {title}
+      </a>
       <ul className="space-y-1.5">
         {items.map((it) => (
           <li key={it.to}>
@@ -191,14 +264,22 @@ function MobileGroup({
   const [open, setOpen] = useState(false);
   return (
     <div className="border-b border-border/60">
-      <button onClick={() => setOpen((v) => !v)} className="w-full flex items-center justify-between py-2.5">
+      <button
+        onClick={() => setOpen((v) => !v)}
+        className="w-full flex items-center justify-between py-2.5"
+      >
         <span>{label}</span>
         <ChevronDown className={`size-4 transition ${open ? "rotate-180" : ""}`} />
       </button>
       {open && (
         <div className="pb-2 pl-3 flex flex-col">
           {items.map((it) => (
-            <a key={it.to} href={it.to} onClick={onClick} className="py-2 text-sm text-foreground/80">
+            <a
+              key={it.to}
+              href={it.to}
+              onClick={onClick}
+              className="py-2 text-sm text-foreground/80"
+            >
               {it.label}
             </a>
           ))}

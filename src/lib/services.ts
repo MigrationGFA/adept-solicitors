@@ -4,7 +4,8 @@ export const usaServices: ServiceMeta[] = [
   {
     slug: "international-business-law",
     title: "International Business Law",
-    blurb: "Strategic counsel for U.S. enterprises operating across borders, with deep expertise in Nigeria–U.S. transactions.",
+    blurb:
+      "Strategic counsel for U.S. enterprises operating across borders, with deep expertise in Nigeria–U.S. transactions.",
     region: "USA",
     handles: [
       "Cross-border contract drafting and negotiation",
@@ -22,7 +23,8 @@ export const usaServices: ServiceMeta[] = [
   {
     slug: "legal-advisory",
     title: "Corporate Legal Advisory",
-    blurb: "On-demand general counsel services for growth-stage companies, family offices, and diaspora entrepreneurs.",
+    blurb:
+      "On-demand general counsel services for growth-stage companies, family offices, and diaspora entrepreneurs.",
     region: "USA",
     handles: [
       "Board governance and corporate housekeeping",
@@ -40,7 +42,8 @@ export const usaServices: ServiceMeta[] = [
   {
     slug: "transactions-negotiations",
     title: "Transactions & Negotiations",
-    blurb: "We lead and support high-stakes commercial negotiations from term sheet through closing.",
+    blurb:
+      "We lead and support high-stakes commercial negotiations from term sheet through closing.",
     region: "USA",
     handles: [
       "M&A and asset purchase transactions",
@@ -74,7 +77,8 @@ export const usaServices: ServiceMeta[] = [
   {
     slug: "company-formation",
     title: "U.S. Company Formation",
-    blurb: "From Delaware C-Corps to Texas LLCs, we structure entities for growth, tax efficiency, and investor readiness.",
+    blurb:
+      "From Delaware C-Corps to Texas LLCs, we structure entities for growth, tax efficiency, and investor readiness.",
     region: "USA",
     handles: [
       "Entity selection and formation",
@@ -91,7 +95,8 @@ export const usaServices: ServiceMeta[] = [
   {
     slug: "compliance-support",
     title: "Compliance Support",
-    blurb: "Federal, state, and industry-specific compliance programs that scale with your business.",
+    blurb:
+      "Federal, state, and industry-specific compliance programs that scale with your business.",
     region: "USA",
     handles: [
       "BOI / Corporate Transparency Act filings",
@@ -108,7 +113,8 @@ export const usaServices: ServiceMeta[] = [
   {
     slug: "company-secretarial-services",
     title: "Company Secretarial Services",
-    blurb: "Outsourced corporate secretary support to keep your entities clean, current, and compliant.",
+    blurb:
+      "Outsourced corporate secretary support to keep your entities clean, current, and compliant.",
     region: "USA",
     handles: [
       "Annual reports and franchise filings",
@@ -125,7 +131,8 @@ export const usaServices: ServiceMeta[] = [
   {
     slug: "dispute-resolution",
     title: "Dispute Resolution",
-    blurb: "Commercial litigation, arbitration, and pre-suit resolution focused on protecting business value.",
+    blurb:
+      "Commercial litigation, arbitration, and pre-suit resolution focused on protecting business value.",
     region: "USA",
     handles: [
       "Commercial litigation in Texas state and federal courts",
@@ -176,7 +183,8 @@ export const usaServices: ServiceMeta[] = [
   {
     slug: "nigerian-owned-law-firm-texas",
     title: "Nigerian-Owned Law Firm in Texas",
-    blurb: "Founded and led by Nigerian attorneys, built for clients who need both local and international legal depth.",
+    blurb:
+      "Founded and led by Nigerian attorneys, built for clients who need both local and international legal depth.",
     region: "USA",
     handles: [
       "Diaspora-focused legal services",
@@ -196,7 +204,8 @@ export const nigeriaServices: ServiceMeta[] = [
   {
     slug: "immigration-law",
     title: "Immigration Law",
-    blurb: "Visas, residency, citizenship, and corporate immigration support across Nigerian and international jurisdictions.",
+    blurb:
+      "Visas, residency, citizenship, and corporate immigration support across Nigerian and international jurisdictions.",
     region: "Nigeria",
     handles: [
       "Business and investor visas",
@@ -213,7 +222,8 @@ export const nigeriaServices: ServiceMeta[] = [
   {
     slug: "real-estate-property-law",
     title: "Real Estate & Property Law",
-    blurb: "Secure title, structured transactions, and dispute-resistant property dealings across Nigeria.",
+    blurb:
+      "Secure title, structured transactions, and dispute-resistant property dealings across Nigeria.",
     region: "Nigeria",
     handles: [
       "Title verification and perfection",
@@ -264,7 +274,8 @@ export const nigeriaServices: ServiceMeta[] = [
   {
     slug: "oil-gas-law",
     title: "Oil & Gas Law",
-    blurb: "Counsel across the Nigerian energy value chain, from upstream licensing to midstream contracts.",
+    blurb:
+      "Counsel across the Nigerian energy value chain, from upstream licensing to midstream contracts.",
     region: "Nigeria",
     handles: [
       "Licensing and regulatory approvals (NUPRC, NMDPRA)",
@@ -281,7 +292,8 @@ export const nigeriaServices: ServiceMeta[] = [
   {
     slug: "maritime-law",
     title: "Maritime Law",
-    blurb: "Admiralty, shipping, and offshore representation for Nigerian and international operators.",
+    blurb:
+      "Admiralty, shipping, and offshore representation for Nigerian and international operators.",
     region: "Nigeria",
     handles: [
       "Vessel registration and arrest",
@@ -315,7 +327,8 @@ export const nigeriaServices: ServiceMeta[] = [
   {
     slug: "banking-project-finance",
     title: "Banking & Project Finance",
-    blurb: "Structuring, documenting, and closing financings for Nigerian projects and operating companies.",
+    blurb:
+      "Structuring, documenting, and closing financings for Nigerian projects and operating companies.",
     region: "Nigeria",
     handles: [
       "Loan and security documentation",
@@ -349,7 +362,8 @@ export const nigeriaServices: ServiceMeta[] = [
   {
     slug: "company-secretarial-services",
     title: "Company Secretarial Services",
-    blurb: "Outsourced statutory secretarial support that keeps your Nigerian entities in good standing.",
+    blurb:
+      "Outsourced statutory secretarial support that keeps your Nigerian entities in good standing.",
     region: "Nigeria",
     handles: [
       "Annual returns and statutory filings",
@@ -437,7 +451,8 @@ export const internationalServices: ServiceMeta[] = [
   {
     slug: "diaspora-legal-services",
     title: "Diaspora Legal Services",
-    blurb: "A dedicated legal home for Nigerians living abroad — from Houston to London to Toronto.",
+    blurb:
+      "A dedicated legal home for Nigerians living abroad — from Houston to London to Toronto.",
     region: "International",
     handles: [
       "Property purchase and management in Nigeria",
@@ -488,7 +503,8 @@ export const internationalServices: ServiceMeta[] = [
   {
     slug: "foreign-investment-support",
     title: "Foreign Investment Support",
-    blurb: "Helping international investors deploy capital into Nigeria — and Nigerian investors into the U.S.",
+    blurb:
+      "Helping international investors deploy capital into Nigeria — and Nigerian investors into the U.S.",
     region: "International",
     handles: [
       "Inbound and outbound investment structuring",
