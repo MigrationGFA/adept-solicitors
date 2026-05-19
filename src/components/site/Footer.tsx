@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Instagram } from "lucide-react";
 import { site } from "@/lib/site";
 import { usaServices, nigeriaServices, internationalServices } from "@/lib/services";
 import logo from "@/assets/adept-logo.png";
@@ -14,7 +14,7 @@ export function Footer() {
             <div>
               <div className="font-display text-lg font-semibold">Adept Consultants</div>
               <div className="text-[10px] uppercase tracking-[0.18em] text-bone/60">
-                Legal Practitioners & Consultants
+                Adept Legal Practitioners & Consultants
               </div>
             </div>
           </div>
@@ -37,16 +37,62 @@ export function Footer() {
           </ul>
 
           <div className="flex gap-3 mt-6">
-            {[Linkedin, Twitter, Facebook].map((Icon, i) => (
-              <a
-                key={i}
-                href="#"
-                aria-label="Social link"
-                className="size-9 rounded-full border border-bone/20 hover:bg-gold hover:text-navy hover:border-gold flex items-center justify-center transition"
+            <a
+              href="https://linkedin.com/company/adept-solicitors"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="size-9 rounded-full border border-bone/20 hover:bg-gold hover:text-navy hover:border-gold flex items-center justify-center transition"
+            >
+              <Linkedin className="size-4" />
+            </a>
+            <a
+              href="https://twitter.com/AdeptLP"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="X (Twitter)"
+              className="size-9 rounded-full border border-bone/20 hover:bg-gold hover:text-navy hover:border-gold flex items-center justify-center transition"
+            >
+              <Twitter className="size-4" />
+            </a>
+            <a
+              href="https://facebook.com/AdeptLP"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              className="size-9 rounded-full border border-bone/20 hover:bg-gold hover:text-navy hover:border-gold flex items-center justify-center transition"
+            >
+              <Facebook className="size-4" />
+            </a>
+            <a
+              href="https://instagram.com/adeptchambers26"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="size-9 rounded-full border border-bone/20 hover:bg-gold hover:text-navy hover:border-gold flex items-center justify-center transition"
+            >
+              <Instagram className="size-4" />
+            </a>
+            <a
+              href="https://wa.me/2348143976462"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp"
+              className="size-9 rounded-full border border-bone/20 hover:bg-gold hover:text-navy hover:border-gold flex items-center justify-center transition"
+            >
+              <svg
+                className="size-4"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               >
-                <Icon className="size-4" />
-              </a>
-            ))}
+                <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21z" />
+                <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1" />
+              </svg>
+            </a>
           </div>
         </div>
 

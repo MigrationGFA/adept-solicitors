@@ -3,7 +3,7 @@ export const site = {
   legal: "Adept Legal Practitioners & Consultants",
   domain: "adeptllc.com",
   tagline: "Cross-Border Legal Solutions Between Texas & Nigeria",
-  phones: ["469-217-9855", "469-479-7515"],
+  phones: ["469-217-9855", "214-892-8039"],
   fax: "469-217-9877",
   email: "adeptchambers@gmail.com",
   address: {
@@ -12,7 +12,7 @@ export const site = {
     country: "United States",
   },
   hours: "Mon – Fri · 9:00 AM – 6:00 PM CT",
-  whatsapp: "+12134567890",
+  whatsapp: "(+234) 814-397-6462",
 };
 
 export type ServiceMeta = {

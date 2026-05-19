@@ -21,7 +21,7 @@ export const Route = createFileRoute("/book-consultation")({
 
 function BookPage() {
   const benefits = [
-    "Confidential intake with a senior attorney",
+    "Confidential intake with a senior partner",
     "Clear next steps within one business day",
     "Transparent, written fee arrangements",
     "Cross-border perspective on every matter",
@@ -38,7 +38,7 @@ function BookPage() {
         <div>
           <div className="eyebrow mb-3">What to expect</div>
           <h2 className="font-display text-3xl font-semibold text-navy mb-6">
-            A senior attorney, on the call.
+            A senior partner, on the call.
           </h2>
           <ul className="space-y-3">
             {benefits.map((b) => (

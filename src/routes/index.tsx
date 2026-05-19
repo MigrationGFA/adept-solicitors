@@ -281,7 +281,7 @@ function InternationalSection() {
           </h2>
           <p className="mt-6 text-bone/75 text-lg leading-relaxed max-w-xl">
             We sit at the crossroads of two legal systems and one global community. Our cross-border
-            practice is built for clients whose lives, businesses, and ambitions don't fit neatly
+            practice is built for clients whose lives, businesses, and ambitions do not fit neatly
             inside a single jurisdiction.
           </p>
           <Link

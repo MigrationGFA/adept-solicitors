@@ -31,7 +31,7 @@ export function Header() {
       <div className="hidden md:block bg-navy text-navy-foreground/90 text-xs">
         <div className="container-prose flex items-center justify-between py-2">
           <p>
-            {site.address.line1} · {site.address.line2}
+            {site.address.line1}, {site.address.line2}
           </p>
           <div className="flex items-center gap-5">
             <a
@@ -66,7 +66,7 @@ export function Header() {
                 Adept Consultants
               </div>
               <div className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-                Legal Practitioners & Consultants
+                Adept Legal Practitioners & Consultants
               </div>
             </div>
           </Link>
