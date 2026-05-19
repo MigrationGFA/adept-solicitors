@@ -1,5 +1,6 @@
 import { useState, type FormEvent } from "react";
 import { CheckCircle2 } from "lucide-react";
+import { useForm, ValidationError } from "@formspree/react";
 
 type Field = {
   name: string;
@@ -17,7 +18,7 @@ export function ConsultationForm({
   variant?: "full" | "compact";
   title?: string;
 }) {
-  const [submitted, setSubmitted] = useState(false);
+  const [state, handleSubmit] = useForm("mnjrjqdk"); // Replace with your Formspree form ID
   const [errors, setErrors] = useState<Record<string, string>>({});
 
   const fields: Field[] =
@@ -63,20 +64,29 @@ export function ConsultationForm({
 
   function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const data = new FormData(e.currentTarget);
+    const formData = new FormData(e.currentTarget);
     const errs: Record<string, string> = {};
+
     fields.forEach((f) => {
-      if (f.required && !String(data.get(f.name) ?? "").trim()) errs[f.name] = "Required";
+      if (f.required && !String(formData.get(f.name) ?? "").trim()) {
+        errs[f.name] = "Required";
+      }
     });
-    const email = String(data.get("email") ?? "");
-    if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errs.email = "Invalid email";
+
+    const email = String(formData.get("email") ?? "");
+    if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      errs.email = "Invalid email";
+    }
+
     setErrors(errs);
+
     if (Object.keys(errs).length === 0) {
-      setSubmitted(true);
+      // Submit to Formspree
+      handleSubmit(e);
     }
   }
 
-  if (submitted) {
+  if (state.succeeded) {
     return (
       <div className="rounded-md border border-border bg-card p-8 shadow-card-soft text-center">
         <CheckCircle2 className="size-10 mx-auto text-gold mb-3" />
@@ -132,15 +142,17 @@ export function ConsultationForm({
                 className="w-full rounded-sm border border-input bg-background px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent"
               />
             )}
+            <ValidationError prefix={f.label} field={f.name} errors={state.errors} />
             {errors[f.name] && <p className="text-xs text-destructive mt-1">{errors[f.name]}</p>}
           </div>
         ))}
       </div>
       <button
         type="submit"
-        className="mt-6 w-full md:w-auto inline-flex items-center justify-center rounded-sm bg-navy text-navy-foreground px-7 py-3 text-sm font-medium hover:bg-navy/90 transition shadow-card-soft"
+        disabled={state.submitting}
+        className="mt-6 w-full md:w-auto inline-flex items-center justify-center rounded-sm bg-navy text-navy-foreground px-7 py-3 text-sm font-medium hover:bg-navy/90 transition shadow-card-soft disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        Submit Request
+        {state.submitting ? "Sending..." : "Submit Request"}
       </button>
     </form>
   );
