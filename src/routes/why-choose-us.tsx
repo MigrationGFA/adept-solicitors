@@ -35,9 +35,9 @@ export const Route = createFileRoute("/why-choose-us")({
             </p>
           </div>
           <div>
-            <div className="eyebrow mb-3">Senior attorney attention</div>
+            <div className="eyebrow mb-3">Senior partner attention</div>
             <h2 className="font-display text-3xl font-semibold text-navy mb-4">
-              Senior attorney attention
+              Senior partner attention
             </h2>
             <p className="text-foreground/80 leading-relaxed text-lg">
               Your matter is led by a partner. Always. No exceptions.
