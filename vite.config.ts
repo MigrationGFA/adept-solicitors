@@ -8,6 +8,9 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   // Ensure assets are referenced relative to the root
   base: "/",
+  server: {
+    port: 3002, // Change this to your desired port
+  },
   plugins: [
     tanstackStart(),
     tailwindcss(),

@@ -29,12 +29,35 @@ export function Footer() {
               {site.address.line2}
             </li>
             <li className="flex items-center gap-3">
-              <Phone className="size-4 text-gold" /> {site.phones.join(" · ")}
+              <Phone className="size-4 text-gold" /> {site.phones[1]}
+              {/* <Phone className="size-4 text-gold" /> {site.phones.join(" · ")} */}
             </li>
             <li className="flex items-center gap-3">
               <Mail className="size-4 text-gold" /> {site.email}
             </li>
           </ul>
+
+          {/* Nigerian Office Contact */}
+          <div className="mt-6 pt-4 border-t border-bone/20">
+            <p className="text-xs uppercase tracking-wider text-gold font-semibold mb-3">
+              Lagos Office
+            </p>
+            <ul className="space-y-2.5 text-sm text-bone/80">
+              <li className="flex items-start gap-3">
+                <MapPin className="size-4 mt-0.5 text-gold" /> 8, Providence Street, Lekki Phase 1,
+                Lagos, Nigeria
+              </li>
+              <li className="flex items-center gap-3">
+                <Phone className="size-4 text-gold" /> (+234) 814-397-6462
+              </li>
+              <li className="flex items-center gap-3">
+                {/* <Phone className="size-4 text-gold" /> (+234) 814-397-6462 (WhatsApp) */}
+              </li>
+              <li className="flex items-center gap-3">
+                <Mail className="size-4 text-gold" /> lagos@adeptlp.com
+              </li>
+            </ul>
+          </div>
 
           <div className="flex gap-3 mt-6">
             <a

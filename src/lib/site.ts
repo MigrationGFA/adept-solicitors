@@ -5,7 +5,7 @@ export const site = {
   tagline: "Cross-Border Legal Solutions Between Texas & Nigeria",
   phones: ["469-217-9855", "214-892-8039"],
   fax: "469-217-9877",
-  email: "adeptchambers@gmail.com",
+  email: "dallas@adeptlp.com",
   address: {
     line1: "5465 Legacy Drive, Ste 650",
     line2: "Plano, Texas 75024",
@@ -13,6 +13,9 @@ export const site = {
   },
   hours: "Mon – Fri · 9:00 AM – 6:00 PM CT",
   whatsapp: "(+234) 814-397-6462",
+  lagosEmail: "lagos@adeptlp.com",
+  infoEmail: "info@adeptlp.com",
+  partnerEmail: "yinka@adeptlp.com",
 };
 
 export type ServiceMeta = {

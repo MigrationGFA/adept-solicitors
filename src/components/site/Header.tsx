@@ -38,7 +38,7 @@ export function Header() {
               href={`tel:${site.phones[0].replace(/-/g, "")}`}
               className="flex items-center gap-2 hover:text-gold transition"
             >
-              <Phone className="size-3.5" /> {site.phones[0]}
+              <Phone className="size-3.5" /> {site.phones[1]}
             </a>
             <a href={`mailto:${site.email}`} className="hover:text-gold transition">
               {site.email}
@@ -61,6 +61,8 @@ export function Header() {
               alt="Adept Consultants"
               className="h-10 md:h-12 w-auto rounded-sm shadow-card-soft"
             />
+          </Link>
+          <Link to="/nigeria">
             <div className="leading-tight hidden sm:block">
               <div className="font-display text-base md:text-lg font-semibold tracking-tight text-navy">
                 Adept Consultants

@@ -127,7 +127,7 @@ function TrustBar() {
   const stats = [
     { v: "20+", l: "Years cumulative experience" },
     { v: "3", l: "Jurisdictions: TX, Nigeria, International" },
-    { v: "100%", l: "Senior attorney attention" },
+    { v: "100%", l: "Senior partner attention" },
     { v: "1 Day", l: "Average response time" },
   ];
   return (
@@ -313,7 +313,7 @@ function WhyChooseUs() {
   const reasons = [
     {
       icon: Scale,
-      title: "Senior attorney attention",
+      title: "Senior partner attention",
       desc: "Your matter is led by a partner — not handed off. Always.",
     },
     {
