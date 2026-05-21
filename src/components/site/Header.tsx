@@ -38,7 +38,7 @@ export function Header() {
               href={`tel:${site.phones[0].replace(/-/g, "")}`}
               className="flex items-center gap-2 hover:text-gold transition"
             >
-              <Phone className="size-3.5" /> {site.phones[1]}
+              <Phone className="size-3.5" /> {site.phones[0]}
             </a>
             <a href={`mailto:${site.email}`} className="hover:text-gold transition">
               {site.email}
