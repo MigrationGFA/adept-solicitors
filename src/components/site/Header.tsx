@@ -48,20 +48,29 @@ export function Header() {
       </div>
 
       <header
-        className={`sticky top-0 z-50 transition-all duration-300 ${
+        className={`sticky top-0 z-50 transition-all duration-300 py-3 md:py-0 ${
           scrolled
             ? "bg-background/90 backdrop-blur-md border-b border-border shadow-card-soft"
             : "bg-background/70 backdrop-blur"
         }`}
       >
-        <div className="container-prose flex items-center justify-between h-16 md:h-20">
-          <Link to="/" className="flex items-center gap-3">
-            <img
-              src={logo}
-              alt="Adept Consultants"
-              className="h-10 md:h-12 w-auto rounded-sm shadow-card-soft"
-            />
-          </Link>
+        <div className="container-prose flex items-center gap-1 justify-between h-16 md:h-20">
+          <div className="flex flex-col gap-1.5 md:flex-row">
+            <Link to="/" className="flex md:items-center ">
+              <img
+                src={logo}
+                alt="Adept Consultants"
+                className="h-10 md:h-12 w-auto rounded-sm shadow-card-soft"
+              />
+            </Link>
+            <Link to="/nigeria">
+              <div className="leading-tight block sm:hidden">
+                <div className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+                  Adept Legal Practitioners <br /> & Consultants
+                </div>
+              </div>
+            </Link>
+          </div>
           <Link to="/nigeria">
             <div className="leading-tight hidden sm:block">
               {/* <div className="font-display text-base md:text-lg font-semibold tracking-tight text-navy">
