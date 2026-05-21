@@ -78,12 +78,12 @@ function ContactPage() {
               value="info@adeptlp.com"
               href="mailto:info@adeptlp.com"
             />
-            <Item
+            {/* <Item
               icon={Mail}
               label="Founding Partner"
               value="yinka@adeptlp.com"
               href="mailto:yinka@adeptlp.com"
-            />
+            /> */}
           </div>
         </div>
         <ConsultationForm />

@@ -12,9 +12,9 @@ export function Footer() {
           <div className="flex items-center gap-3 mb-5">
             <img src={logo} alt="Adept Consultants" className="h-11 w-auto rounded-sm" />
             <div>
-              <div className="font-display text-lg font-semibold">Adept Consultants</div>
+              {/* <div className="font-display text-lg font-semibold">Adept Consultants</div> */}
               <div className="text-[10px] uppercase tracking-[0.18em] text-bone/60">
-                Adept Legal Practitioners & Consultants
+                Adept Legal Practitioners <br /> & Consultants
               </div>
             </div>
           </div>
@@ -29,8 +29,8 @@ export function Footer() {
               {site.address.line2}
             </li>
             <li className="flex items-center gap-3">
-              <Phone className="size-4 text-gold" /> {site.phones[1]}
-              {/* <Phone className="size-4 text-gold" /> {site.phones.join(" · ")} */}
+              {/* <Phone className="size-4 text-gold" /> {site.phones[1]} */}
+              <Phone className="size-4 text-gold" /> {site.phones.join(" · ")}
             </li>
             <li className="flex items-center gap-3">
               <Mail className="size-4 text-gold" /> {site.email}
@@ -61,7 +61,7 @@ export function Footer() {
 
           <div className="flex gap-3 mt-6">
             <a
-              href="https://linkedin.com/company/adept-solicitors"
+              href="https://www.linkedin.com/in/adept-solicitors-434401125?fromQR"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
@@ -79,7 +79,7 @@ export function Footer() {
               <Twitter className="size-4" />
             </a>
             <a
-              href="https://facebook.com/AdeptLP"
+              href="https://www.facebook.com/profile.php?id=61589558086419"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"

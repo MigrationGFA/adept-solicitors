@@ -64,11 +64,11 @@ export function Header() {
           </Link>
           <Link to="/nigeria">
             <div className="leading-tight hidden sm:block">
-              <div className="font-display text-base md:text-lg font-semibold tracking-tight text-navy">
+              {/* <div className="font-display text-base md:text-lg font-semibold tracking-tight text-navy">
                 Adept Consultants
-              </div>
+              </div> */}
               <div className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-                Adept Legal Practitioners & Consultants
+                Adept Legal Practitioners <br /> & Consultants
               </div>
             </div>
           </Link>
