@@ -134,6 +134,20 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           areaServed: ["United States", "Nigeria", "International"],
         }),
       },
+      // --- GOOGLE TAG ADDITIONS START HERE ---
+      {
+        src: "https://www.googletagmanager.com/gtag/js?id=AW-18190870465",
+        async: true,
+      },
+      {
+        children: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-18190870465');
+        `,
+      },
+      // --- GOOGLE TAG ADDITIONS END HERE ---
     ],
   }),
   shellComponent: RootShell,
