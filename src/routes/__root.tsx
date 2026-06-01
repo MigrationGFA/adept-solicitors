@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
@@ -6,12 +7,31 @@ import {
   useRouter,
   HeadContent,
   Scripts,
+  useLocation, // Added for tracking page changes
 } from "@tanstack/react-router";
+import { useEffect } from "react"; // Added to handle side-effects
 
 import appCss from "../styles.css?url";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { FloatingCTA } from "@/components/site/FloatingCTA";
+
+// 1. DYNAMIC COMPONENT FOR THE "ALTERNATIVE" LIBRARY EFFECT
+function GoogleAdsTracker({ targetId }: { targetId: string }) {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (typeof window !== "undefined" && (window as any).gtag) {
+      // Fires a virtual page view event to Google Ads on every path change
+      (window as any).gtag("config", targetId, {
+        page_path: location.pathname,
+        page_location: window.location.href,
+      });
+    }
+  }, [location.pathname, targetId]);
+
+  return null;
+}
 
 function NotFoundComponent() {
   return (
@@ -134,7 +154,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           areaServed: ["United States", "Nigeria", "International"],
         }),
       },
-      // --- GOOGLE TAG ADDITIONS START HERE ---
+      // --- GOOGLE TAG INITIALIZATION SCRIPTS ---
       {
         src: "https://www.googletagmanager.com/gtag/js?id=AW-18190870465",
         async: true,
@@ -144,10 +164,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'AW-18190870465');
+          
+          // Disable default auto-tracking to stop double counts in client routing
+          gtag('config', 'AW-18190870465', { 'send_page_view': false });
         `,
       },
-      // --- GOOGLE TAG ADDITIONS END HERE ---
     ],
   }),
   shellComponent: RootShell,
@@ -164,6 +185,8 @@ function RootShell({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         {children}
+        {/* 2. AUTOMATIC ROUTE LISTENER COMPONENT PLACED IN THE APPLICATION SHELL */}
+        <GoogleAdsTracker targetId="AW-18190870465" />
         <Scripts />
       </body>
     </html>
