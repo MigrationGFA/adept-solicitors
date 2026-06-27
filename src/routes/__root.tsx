@@ -7,31 +7,12 @@ import {
   useRouter,
   HeadContent,
   Scripts,
-  useLocation, // Added for tracking page changes
 } from "@tanstack/react-router";
-import { useEffect } from "react"; // Added to handle side-effects
 
 import appCss from "../styles.css?url";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { FloatingCTA } from "@/components/site/FloatingCTA";
-
-// 1. DYNAMIC COMPONENT FOR THE "ALTERNATIVE" LIBRARY EFFECT
-function GoogleAdsTracker({ targetId }: { targetId: string }) {
-  const location = useLocation();
-
-  useEffect(() => {
-    if (typeof window !== "undefined" && (window as any).gtag) {
-      // Fires a virtual page view event to Google Ads on every path change
-      (window as any).gtag("config", targetId, {
-        page_path: location.pathname,
-        page_location: window.location.href,
-      });
-    }
-  }, [location.pathname, targetId]);
-
-  return null;
-}
 
 function NotFoundComponent() {
   return (
@@ -76,6 +57,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
           >
             Try again
           </button>
+
           <a
             href="/"
             className="inline-flex items-center justify-center rounded-sm border border-input bg-background px-5 py-2.5 text-sm font-medium text-foreground hover:bg-accent transition"
@@ -154,20 +136,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           areaServed: ["United States", "Nigeria", "International"],
         }),
       },
-      // --- GOOGLE TAG INITIALIZATION SCRIPTS ---
+      // Google Tag Manager
       {
-        src: "https://www.googletagmanager.com/gtag/js?id=AW-18190870465",
-        async: true,
-      },
-      {
-        children: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          
-          // Disable default auto-tracking to stop double counts in client routing
-          gtag('config', 'AW-18190870465', { 'send_page_view': false });
-        `,
+        children: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TXLJWH52');`,
       },
     ],
   }),
@@ -184,9 +159,16 @@ function RootShell({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body>
+        {/* Google Tag Manager (noscript) - must be immediately after opening body tag */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-TXLJWH52"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
         {children}
-        {/* 2. AUTOMATIC ROUTE LISTENER COMPONENT PLACED IN THE APPLICATION SHELL */}
-        <GoogleAdsTracker targetId="AW-18190870465" />
         <Scripts />
       </body>
     </html>
